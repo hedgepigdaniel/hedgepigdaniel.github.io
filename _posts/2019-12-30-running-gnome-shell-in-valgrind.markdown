@@ -2,7 +2,8 @@
 layout: post
 title:  "Adventures making gnome-shell run in Valgrind: part 1"
 date:   2019-12-30 20:13:20 +1100
-categories: blogging gnome dconf
+categories: [blogging, gnome, dconf]
+description: My adventures debugging crashes and hangs when running gnome-shell in Valgrind, and tracing them to spurious changed signals emitted from DConf
 ---
 
 There is a nasty sort of bug that can occur in languages without memory safety - bugs where memory is accessed incorrectly. There are a few reasons why these bugs are nasty, worse than many other types of bugs:
