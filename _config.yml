@@ -31,7 +31,7 @@ github_username:  hedgepigdaniel
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
+  # - jekyll-sitemap # Doesn't work on github pages :(
 
 # Exclude from processing.
 # The following items will not be processed, by default.
