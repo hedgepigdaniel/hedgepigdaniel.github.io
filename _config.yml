@@ -33,6 +33,8 @@ plugins:
   - jekyll-feed
   # - jekyll-sitemap # Doesn't work on github pages :(
 
+show_excerpts: true
+
 google_analytics: UA-156004979-1
 
 # Exclude from processing.
