@@ -22,7 +22,7 @@ To test the various filters, I took a picture of the OpenCV chessboard calibrati
 
 The photo of the pattern (which was on a TV screen, which is flat), looks like this:
 
-{% include image.html url="/assets/img/chess-raw.png" description="Raw photo of chessboard pattern" %}
+{% include image.html url="/assets/img/chess-raw.png" description="Original photo of chessboard pattern" %}
 
 If you didn't know that the test image was a chess board, it wouldn't be obvious that in real life its all straight lines and right angles. My aim is to take this image from the camera, and produce an output that looks (geometrically) like the test image.
 
@@ -38,7 +38,7 @@ Obviously I'm not the first person to have this problem, and consequently I foun
 $ ffmpeg -i chess-raw.png -vf lenscorrection=k1=-0.227:k2=-0.022 chess-lenscorrection-so.png
 ```
 
-{% include image.html url="/assets/img/chess-lenscorrection-so.png" description="chessboard corrected with lenscorrection using parameters from stack overflow" %}
+{% include image.html url="/assets/img/chess-lenscorrection-so.png" description="chessboard corrected with lenscorrection filter using parameters from stack overflow" %}
 
 You could reasonably say that this is much worse than the raw image, even though in a sense it is closer to the ideal.
 
@@ -73,7 +73,7 @@ If $b=k_1$, these equations are "almost" the same. Unfortunately I couldn't get 
 $ ffmpeg -i chess-raw.png -vf lenscorrection=k1=-0.08101:k2=0 chess-lenscorrection-hugin.png
 ```
 
-{% include image.html url="/assets/img/chess-lenscorrection-hugin.png" description="chessboard corrected with lenscorrection using parameters from Hugin" %}
+{% include image.html url="/assets/img/chess-lenscorrection-hugin.png" description="chessboard corrected with lenscorrection filter using parameters from Hugin" %}
 
 Obviously, this didn't work well at all. I'm not sure where I went wrong.
 
@@ -106,7 +106,7 @@ The default interpolation is bilinear, which is acceptable, and looks much bette
 $ ffmpeg -i chess-raw.png -vf 'lensfun=make=GoPro:model=HERO5 Black:lens_model=fixed lens:mode=geometry:target_geometry=rectilinear:interpolation=lanczos' chess-lensfun-lanczos.png
 ```
 
-{% include image.html url="/assets/img/chess-lensfun-lanczos.png" description="chessboard corrected with lensfun, with lanczos interpolation" %}
+{% include image.html url="/assets/img/chess-lensfun-lanczos.png" description="chessboard corrected with lensfun, using lanczos interpolation" %}
 
 The lensfun filter is significantly slower than the lenscorrection filter, but did a much better job (more accurate corrections, and better interpolation). It also provides the ability to choose from multiple projections for the output (e.g. correct for the imperfections in the lens but maintain the stereographic projection, or output a equirectangular projection instead, etc), which I found interesting.
 
@@ -162,7 +162,7 @@ If you don't care about speed, you could use both lensfun (to perform accurate c
 $ ffmpeg -i chess-raw.png -vf 'lensfun=make=GoPro:model=HERO5 Black:lens_model=fixed lens:mode=geometry:target_geometry=fisheye_stereographic,v360=input=sg:ih_fov=122.6:iv_fov=94.4:output=flat:d_fov=140:pitch=-105:w=320:h=240' chess-lensfun-v360.png
 ```
 
-{% include image.html url="/assets/img/chess-lensfun-v360.png" description="chessboard corrected with lensfun, rotated with v360" %}
+{% include image.html url="/assets/img/chess-lensfun-v360.png" description="chessboard corrected with lensfun, and rotated with v360" %}
 
 ## Conclusion
 
