@@ -27,7 +27,9 @@ The photo of the pattern (which was on a TV screen, which is flat), looks like t
 If you didn't know that the test image was a chess board, it wouldn't be obvious that in real life its all straight lines and right angles. My aim is to take this image from the camera, and produce an output that looks (geometrically) like the test image.
 
 ## lenscorrection filter
-The [lenscorrection][lenscorrection] filter warps the image to correct for lens distortion according to the supplied parameters appropriate for the camera and lens. It acceps two parameters `k1` and `k2`, which correspond to a quadratic and cubic correction factor applied to the radius of a pixel from the center of the image.
+{% katexmm %}
+The [lenscorrection][lenscorrection] filter warps the image to correct for lens distortion according to the supplied parameters appropriate for the camera and lens. It acceps two parameters $k_1$and $k_2$, which correspond to a quadratic and cubic correction factor applied to the radius of a pixel from the center of the image.
+{% endkatexmm %}
 
 #### Stack overflow
 Obviously I'm not the first person to have this problem, and consequently I found a [stack overflow][stackoverflow-lenscorrection] thread where other people had posted various values for the same and slightly different cameras. Most of these did not work well at all, but one of them worked somewhat:
@@ -41,16 +43,39 @@ $ ffmpeg -i chess-raw.png -vf lenscorrection=k1=-0.227:k2=-0.022 chess-lenscorre
 You could reasonably say that this is much worse than the raw image, even though in a sense it is closer to the ideal.
 
 #### Hugin
-I tried to use the Hugin lens calibration tool to find suitable values of `k1` and `k2`. Hugin uses a different model than the lenscorrection filter, but both of them have coefficients of `r^2` (`k1` or `c`) and `r^4` (`k2` or `a`). So I took some pictures of apartment blocks and set up Hugin to find values for `a` and `c`, while fixing `b` to 0 (I don't think this is quite right, but worth a try). The result was the following:
+{% katexmm %}
+
+I tried to use the Hugin lens calibration tool to find suitable values of $k_1$ and $k_2$. The model of lens distortion that the lenscorrection filter uses is called poly5, and the value of $r_d$ (the radius in the original distorted image) is given as a function of $r_u$ (the radius in the corrected output image) as follows:
+
+$$
+r_d=r_u(1+k_1r_u^2+k_2r_u^4)
+$$
+
+Meanwhile, Hugin uses the following model (which is called ptlens):
+
+$$
+r_d=r_u⋅(ar_u^3+br_u^2+cr_u+1−a−b−c)
+$$
+
+To try to find common ground between these two models, we need to dispense with $k_2$, because there is no $r_u^5$ term in ptlens. Similarly $a$ and $c$ have to go, because there is no $r_u^2$ or $r_u^4$ term in poly5. So setting $k_2=a=c=0$ the two equations simplify to the following:
+
+$$
+r_d=r_u(1+k_1r_u^2)
+$$
+$$
+r_d=r_u⋅(1+br_u^2−b)
+$$
+
+If $b=k_1$, these equations are "almost" the same. Unfortunately I couldn't get rid of the $br_u$ term, but this is the closest thing I could find to an equivalence between the two models. Presumeably, the mismatched linear term would simply scale the image. So I took some pictures of apartment blocks and asked Hugin to find a ptlens model using only $b$. Hugin gave the value $-0.08101$, so I used that value as $k_1$ in the lenscorrection filter. This was the result:
+{% endkatexmm %}
 
 ```
-$ ffmpeg -i chess-raw.png -vf lenscorrection=k1=-0.3499:k2=0.0112 chess-lenscorrection-hugin.png
+$ ffmpeg -i chess-raw.png -vf lenscorrection=k1=-0.08101:k2=0 chess-lenscorrection-hugin.png
 ```
 
 {% include image.html url="/assets/img/chess-lenscorrection-hugin.png" description="chessboard corrected with lenscorrection using parameters from Hugin" %}
 
-Subjectively (in my opinion), this is better, because at least the central region of the image has reasonably straight lines - you could crop out the rest. But towards the edge it is still very wrong.
-
+Obviously, this didn't work well at all. I'm not sure where I went wrong.
 
 This filter is simple and reasonably fast, but I could not find values for `k1` and `k2` which did a particularly good job of correcting for the distortion on my camera. Also, it only performs nearest neighbour interpolation, which results in visible aliasing in the output (I resized the images to 320x240 so that this is obvious).
 

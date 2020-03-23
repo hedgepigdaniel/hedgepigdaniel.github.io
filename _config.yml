@@ -31,6 +31,7 @@ github_username:  hedgepigdaniel
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-katex
   # - jekyll-sitemap # Doesn't work on github pages :(
 
 show_excerpts: true
