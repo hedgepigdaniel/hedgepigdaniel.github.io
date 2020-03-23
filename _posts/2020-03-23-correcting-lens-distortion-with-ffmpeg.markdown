@@ -31,7 +31,7 @@ If you didn't know that the test image was a chess board, it wouldn't be obvious
 The [lenscorrection][lenscorrection] filter warps the image to correct for lens distortion according to the supplied parameters appropriate for the camera and lens. It acceps two parameters $k_1$and $k_2$, which correspond to a quadratic and cubic correction factor applied to the radius of a pixel from the center of the image.
 {% endkatexmm %}
 
-#### Stack overflow
+### Stack overflow
 Obviously I'm not the first person to have this problem, and consequently I found a [stack overflow][stackoverflow-lenscorrection] thread where other people had posted various values for the same and slightly different cameras. Most of these did not work well at all, but one of them worked somewhat:
 
 ```
@@ -42,7 +42,7 @@ $ ffmpeg -i chess-raw.png -vf lenscorrection=k1=-0.227:k2=-0.022 chess-lenscorre
 
 You could reasonably say that this is much worse than the raw image, even though in a sense it is closer to the ideal.
 
-#### Hugin
+### Hugin
 {% katexmm %}
 
 I tried to use the Hugin lens calibration tool to find suitable values of $k_1$ and $k_2$. The model of lens distortion that the lenscorrection filter uses is called poly5, and the value of $r_d$ (the radius in the original distorted image) is given as a function of $r_u$ (the radius in the corrected output image) as follows:
@@ -90,7 +90,7 @@ $ ffmpeg -i chess-raw.png -vf 'lensfun=make=GoPro:model=HERO5 Black:lens_model=f
 
 {% include image.html url="/assets/img/chess-lensfun.png" description="chessboard corrected with lensfun" %}
 
-#### scale parameter
+### scale parameter
 Correcting for geometric lens distortion is a process that warps the image - i.e. it "moves" pixels from the source image to a different location in the destination image - or put another way, it maps pixels in the destination image to a different point in the source image. This means that the rectangular source image will not necessarily be mapped to a rectangle in the destination image. So there is a compromise to be made when choosing the scale of the output - either the output can be rectangular and have no blank areas (at the expense of discarding some of the input image), or it can include the entire input image (at the expense of having some blank areas in the output). Lensfun has a parameter called `scale` which controls this compromise. Unfortunately the FFMpeg filter wrapping lensfun did not have such an option. So I made a [patch][ffmpeg-scale-patch] to add the option and pass it through to lensfun. This patch has been applied (hooray), so the following now works:
 
 ```
@@ -99,7 +99,7 @@ $ ffmpeg -i chess-raw.png -vf 'lensfun=make=GoPro:model=HERO5 Black:lens_model=f
 
 {% include image.html url="/assets/img/chess-lensfun-scaled.png" description="chessboard corrected with lensfun, scaled to display entire input" %}
 
-#### interpolation
+### interpolation
 The default interpolation is bilinear, which is acceptable, and looks much better than the nearest neighbour interpolation as used in the lenscorrection filter. But lensfun also supports lanczos interpolation, which in theory should be better. I suspect there is a bug in it though, because the result doesn't look as good as the default:
 
 ```
