@@ -8,6 +8,7 @@ git ls-tree --name-only -z HEAD | xargs -0 rm -rf
 
 # Check out files from the source branch
 git checkout "$BRANCH" .
+git reset
 
 # Build the website
 bundle exec jekyll clean
