@@ -10,6 +10,7 @@ git ls-tree --name-only -z HEAD | xargs -0 rm -rf
 git checkout "$BRANCH" .
 
 # Build the website
+bundle exec jekyll clean
 bundle exec jekyll build
 
 git add .gitignore
