@@ -11,8 +11,9 @@ git checkout "$BRANCH" .
 git reset
 
 # Build the website
+bundle install
 bundle exec jekyll clean
-bundle exec jekyll build
+JEKYLL_ENV=production bundle exec jekyll build
 
 git add .gitignore
 git clean -fd -e _site
