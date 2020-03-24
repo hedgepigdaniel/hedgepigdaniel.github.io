@@ -14,7 +14,7 @@ There are a number of issues with the recorded video which I wanted to fix:
 
 For this post, I'll focus on just the first issue of lens distortion.
 
-I decided to make a first attempt using FFMpeg. FFMpeg is easy to get started with since it has a CLI and doesn't require writing any code. It can read and write basically any media format, and also has a selection of [filters][ffmpeg-filters] that can be used to transform videos, some of which seemed relevant to my task.
+I decided to make a first attempt using FFMpeg. FFMpeg is easy to get started with since it has a CLI and doesn't require writing any code. It can read and write basically any media format, and also has a selection of [filters][ffmpeg-filters] that can be used to transform videos, some of which seemed relevant to my task. It's also open source, which means it's yours to do what you want with.
 
 To test the various filters, I took a picture of the OpenCV chessboard calibration pattern, which looks like this:
 
