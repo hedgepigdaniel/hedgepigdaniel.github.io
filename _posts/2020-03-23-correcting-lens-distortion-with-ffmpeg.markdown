@@ -77,7 +77,9 @@ $ ffmpeg -i chess-raw.png -vf lenscorrection=k1=-0.08101:k2=0 chess-lenscorrecti
 
 Obviously, this didn't work well at all. I'm not sure where I went wrong.
 
-This filter is simple and reasonably fast, but I could not find values for `k1` and `k2` which did a particularly good job of correcting for the distortion on my camera. Also, it only performs nearest neighbour interpolation, which results in visible aliasing in the output (I resized the images to 320x240 so that this is obvious).
+{% katexmm %}
+This filter is simple and reasonably fast, but I could not find values for $k1$ and $k2$ which did a particularly good job of correcting for the distortion on my camera. Also, it only performs nearest neighbour interpolation, which results in visible aliasing in the output (I resized the images to 320x240 so that this is obvious).
+{% endkatexmm %}
 
 ## lensfun filter
 The [lensfun filter][ffmpeg-lensfun] is a wrapper for the [lensfun library][lensfun], which performs correction for many types of lens distortion including barrel distortion. It also includes a database of cameras and lenses and their measured characteristics. I found that the latest development version had a [database entry][lensfun-gopro] for the GoPro HERO5 Black camera that I was using.
