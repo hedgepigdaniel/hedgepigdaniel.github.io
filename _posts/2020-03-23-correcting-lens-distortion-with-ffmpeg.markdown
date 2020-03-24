@@ -175,6 +175,8 @@ For my use case, I've found that using v360 is the best compromise. My camera pr
 In the future, I might write a similar post about video stabilisation. I'm also currently working on a project using libavcodec, OpenCL, and OpenCV that I hope will be capable of video decoding, lens correction, stabilisation, and reencoding all on the GPU, which should be much faster than all these methods which run on the CPU.
 
 
+{% include image.html url="/assets/img/zany-action.jpg" %}
+
 [ffmpeg-filters]: https://ffmpeg.org/ffmpeg-filters.html
 [lenscorrection]: https://ffmpeg.org/ffmpeg-filters.html#toc-lenscorrection
 [ffmpeg-lensfun]: https://ffmpeg.org/ffmpeg-filters.html#toc-lensfun
