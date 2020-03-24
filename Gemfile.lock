@@ -10,6 +10,7 @@ GEM
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
     execjs (2.7.0)
+    fastimage (2.1.7)
     ffi (1.11.2)
     forwardable-extended (2.6.0)
     http_parser.rb (0.6.0)
@@ -32,6 +33,9 @@ GEM
       terminal-table (~> 1.8)
     jekyll-feed (0.13.0)
       jekyll (>= 3.7, < 5.0)
+    jekyll-image-size (1.2.1)
+      fastimage (>= 1.8)
+      jekyll (>= 3.7)
     jekyll-katex (1.0.0)
       execjs (~> 2.7)
       jekyll (>= 3.6, < 5.0)
@@ -81,6 +85,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 4.0.0)
   jekyll-feed (~> 0.12)
+  jekyll-image-size
   jekyll-katex
   jekyll-sitemap (~> 1.4)
   minima (~> 2.5.1)
