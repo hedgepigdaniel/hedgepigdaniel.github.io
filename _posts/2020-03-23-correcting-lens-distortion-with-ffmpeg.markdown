@@ -146,7 +146,7 @@ Roughly, v360 works in three stages. Firstly, it maps each input pixel to a vect
 $ ffmpeg -i chess-raw.png -vf 'v360=input=sg:ih_fov=122.6:iv_fov=94.4:output=flat:d_fov=149.2:pitch=-105:w=320:h=240' chess-v360-down.png
 ```
 
-{% include image.html url="/assets/img/chess-v360-down.png" description="chessboard corrected with lensfun, scaled to display entire input" %}
+{% include image.html url="/assets/img/chess-v360-down.png" description="chessboard corrected with v360, rotated down by 15 degrees" %}
 
 I found various bugs and limitations in v360, most of which can be worked around:
 - Although it can deduce the horizontal/vertical field of view if only the diagonal field of view is privided, it does not correctly do this unless the input projection is "fisheye" or "flat" (rectilinear), because that code [is not implemented][v360-missing-fov]. I worked around this problem by directly providing the horizontal and vertical field of view as parameters.
