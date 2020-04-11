@@ -148,10 +148,12 @@ $ ffmpeg -i chess-raw.png -vf 'v360=input=sg:ih_fov=122.6:iv_fov=94.4:output=fla
 
 {% include image.html url="/assets/img/chess-v360-down.png" description="chessboard corrected with v360, rotated down by 15 degrees" %}
 
-I found various bugs and limitations in v360, most of which can be worked around:
-- Although it can deduce the horizontal/vertical field of view if only the diagonal field of view is privided, it does not correctly do this unless the input projection is "fisheye" or "flat" (rectilinear), because that code [is not implemented][v360-missing-fov]. I worked around this problem by directly providing the horizontal and vertical field of view as parameters.
-- The stereographic projection has a built in pitch of 90 degrees, so if the input is stereographic, one must use a pitch of -90 degrees to prevent the virtual camera from facing upwards instead of forwards.
-- The yaw and roll options both seem to perform roll (i.e. twisting the camera lens) - while yaw is impossible (turning the camera sideways).
+When I originally wrote this post, I found a few small but annoying bugs in the filter, which [have since been fixed](#bug-update):
+- Although it can deduce the horizontal/vertical field of view if only the diagonal field of view is privided, it did not correctly do this unless the input projection was "fisheye" or "flat" (rectilinear), because that code [was not implemented at the time][v360-missing-fov]. I worked around this problem by directly providing the horizontal and vertical field of view as parameters.
+- The stereographic projection had a built in pitch of 90 degrees, so if the input was stereographic, one had to use a pitch of -90 degrees to prevent the virtual camera from facing upwards instead of forwards.
+- The yaw and roll options both seemed to perform roll (i.e. twisting the camera lens) - while yaw was impossible (turning the camera sideways).
+
+I also found some limitations (which remain):
 - The default output image dimensions are not sane.
 - The scale of the output is determined but the output field of view, so it is up to you to determine what that should be.
 
@@ -176,6 +178,10 @@ In the future, I might write a similar post about video stabilisation. I'm also 
 
 
 {% include image.html url="/assets/img/zany-action.jpg" %}
+
+#### <a name="bug-update"></a>Update (April 11, 2020)
+
+- updated the section on the v360 filter to point out that the bugs I found when I wrote this post have been fixed
 
 [ffmpeg-filters]: https://ffmpeg.org/ffmpeg-filters.html
 [lenscorrection]: https://ffmpeg.org/ffmpeg-filters.html#toc-lenscorrection
