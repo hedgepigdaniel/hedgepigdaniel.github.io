@@ -158,7 +158,7 @@ I also found some limitations (which remain):
 - The scale of the output is determined but the output field of view, so it is up to you to determine what that should be.
 
 
-Despite having a few bugs, not performing polynomial corrections, and not having a database of lenses, v360 has a few advantages over lensfun. It is much faster, perhaps due to the presence of a SIMD optimised implementation in assembly. The rotations are useful if the camera wasn't facing quite the right way, and produce much better output in this case than cropping. The lanczos interpolation works well. Its scope is smaller than lensfun and the code in my opinion is easier to read, if you like doing that.
+Despite not performing polynomial corrections and not having a database of lenses, v360 has a few advantages over lensfun. It is much faster, perhaps due to the presence of a SIMD optimised implementation in assembly. The rotations are useful if the camera wasn't facing quite the right way, and produce much better output in this case than cropping. The lanczos interpolation works well. Its scope is smaller than lensfun and the code in my opinion is easier to read, if you like doing that.
 
 ## Speed, quality, features: pick 2
 
