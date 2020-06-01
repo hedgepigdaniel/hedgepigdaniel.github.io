@@ -2,9 +2,10 @@
 layout: page
 title: Projects
 permalink: /projects/
+toc: true
+description: A collection of open source projects that I've either created, maintained, or contributed to.
+introduction: This is a collection of open source projects I've either created, maintained, or contributed to.
 ---
-
-This is a collection of open source projects that I've either created, maintained, or contributed to.
 
 ## Maintainership
 
@@ -28,7 +29,7 @@ These are projects which I maintain that have a significant community following,
 
 ## Authorship
 
-These are projects which I created myself, either mostly or entirely.
+These are projects which I created myself, either alone or with others.
 
 ### webpack-error-on-warnings-plugin
 

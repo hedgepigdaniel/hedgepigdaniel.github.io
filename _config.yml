@@ -34,6 +34,7 @@ plugins:
   - jekyll-katex
   - jekyll-image-size
   - jekyll-sitemap
+  - jekyll-toc
 
 show_excerpts: true
 
