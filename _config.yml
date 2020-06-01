@@ -33,7 +33,7 @@ plugins:
   - jekyll-feed
   - jekyll-katex
   - jekyll-image-size
-  # - jekyll-sitemap # Doesn't work on github pages :(
+  - jekyll-sitemap
 
 show_excerpts: true
 
