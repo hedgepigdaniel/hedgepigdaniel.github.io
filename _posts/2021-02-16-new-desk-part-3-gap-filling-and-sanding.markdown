@@ -9,7 +9,7 @@ description: Filling gaps in a timber slab with epoxy, sanding, and edge shaping
 
 In [part 2]({% post_url 2021-02-16-new-desk-part-2-finding-a-slab %}) of this series I wrote about how I came into possession of a cut and dressed timber slab. With the slab in my possession, the first task was to turn it into an appropriate shape to be a desk. This included filling in various gaps, sanding surfaces, and rounding corners.
 
-{% include image.html url="/assets/img/burl.jpg" description="a burl is to a tree what a tumour is to an animal" %}
+{% include image.html url="/assets/img/burl.jpg" description="Bruno's previous project" %}
 
 My brother Bruno had previously built a coffee table out of a burl, and he gave me a hand particularly with this part of the project. Apart from lots of advice and lending me a lot of tools, he helped me with the mould and epoxy pouring, which sounds like it was the hardest part of his coffee table.
 
@@ -23,7 +23,7 @@ We decorated the cracks by charring the inside edges with a blowtorch. This crea
 
 The mould prevents the epoxy from escaping while it sets in the slab. To build the mould we used a [single piece of Melamine][melamine] which we bought from Bunnings. Bunnings provides a free cutting service, so it was cut mostly to shape at the store, which meant that it fit in my car and we had less cutting to do.
 
-{% include image.html url="/assets/img/mould.jpg" description="My brother Bruno, next to the mould" %}
+{% include image.html url="/assets/img/mould.jpg" description="Bruno, next to the mould" %}
 
 Building the mould was quite simple &ndash; just some use of a circular saw and inserting lots of screws. I tried to preserve the straight cut edges from Bunnings as much as possible rather than attempt to cut long straight edges myself.
 
@@ -31,11 +31,11 @@ Many tutorials mention products called "mould release" &ndash; a substance which
 
 There are lots of opinions about what kind of adhesive tape should be used to seal the piece when the epoxy is poured. We used painters tape (which looks like waxy paper). It's cheap, easy to find, easy to apply, and perfectly capable of holding the epoxy in if applied neatly.
 
-{% include image.html url="/assets/img/cross-tape.jpg" description="After demoulding: the grooves between strips of tape spread the epoxy away from the crack!" %}
+{% include image.html url="/assets/img/cross-tape.jpg" description="After demoulding: channels of epoxy that seeped through grooves between layers of tape" %}
 
 One issue I faced later is that the epoxy is able spread down the grooves in between strips of tape. For this reason, I think it would have worked better to apply the tape in the direction of the grain. This would mean that any epoxy which travels down the grooves is unlikely to spread far from the crack it leaked out from.
 
-{% include image.html url="/assets/img/demould.jpg" description="It took some hard targeted stabs with a machete to unstick the middle part" %}
+{% include image.html url="/assets/img/demould.jpg" description="Leakage and sticking where the warp caused the slab to rise above the mould" %}
 
 Another problem is keeping the piece firmly against the mould. We simply rested the mould on an outdoor table, but that IKEA table was not particularly rigid in the central area. Also by this time (i.e. after a month of researching how to get this far) the slab had developed a slight warp which caused the central area to lift slightly from the mould. This probably contributed to a small leakage of epoxy in the central area, which made it more difficult to remove the mould. It didn't stick strongly (thanks to the tape, oil, and melamine coating), but because the stuck area was in the middle it required some effort with a machete to remove.
 
@@ -47,7 +47,7 @@ I used two different epoxies &ndash; one which was left over from Bruno's coffee
 
 There are many different kinds of epoxy. They vary in terms of their curing time, endotherm, viscosity, shrinkage during cure, clarity, UV yellowing resistance, and more. I chose not to dye the epoxy and allow the fill to be transparent. This means that there is no need to mix in dye, but also that bubbles and yellowing (including UV induced yellowing) is more visible. So it was useful to choose a UV resistant epoxy, which Barnes Megapour is.
 
-{% include image.html url="/assets/img/wet-bubbles.jpg" description="The combination of charred gaps and fast curing epoxy lead to some bubbles like this being frozen in" %}
+{% include image.html url="/assets/img/wet-bubbles.jpg" description="Small bubbles emerging from charred wood" %}
 
 Another consideration is the curing speed, which is closely related to the endotherm and maximum pouring depth. I used one with a 2-3 hour cure time, and another with 24-48 hours. I much preferred the longer curing time. The working times respectively were about 45 minutes and 3 hours. 45 minutes is short enough to feel rushed when there are many cracks to find and there is a constant stream of bubbles to pop. A lower viscosity and longer cure time means it is easier for bubbles to rise to the surface and pop rather than being frozen in. The combination of all the narrow and irregularly shaped cracks in the timber and the charred edges meant that bubbles kept appearing for a long time, and the results were better with the slow curing epoxy.
 
@@ -55,11 +55,11 @@ Another consideration is the curing speed, which is closely related to the endot
 
 It's important not to pour too much depth at once, because the endothermic curing reaction can cause the epoxy to overheat and cure too fast. This results in the epoxy changing shape after it has hardened, which causes stress and uneven surfaces. The staff at the timber shop told me that in their pieces they typically pour 5 separate layers. My experience confirms that this is a good idea. With the 2020 epoxy, pouring too much at once (more than about 1-2cm) results in bubbles and shrinkage after cure. Barnes Megapour actually shrinks more (subjectively), but it does so before it hardens. But the result of this is that no matter how carefully you fill in all the cracks, the epoxy always sinks in further just before it hardens, so without any permanent impact. But still, even with deep pouring epoxy, you need to do multiple pours. You may as well do them at a consistent depth and minimise bubbles.
 
-{% include image.html url="/assets/img/soft.jpg" description="This epoxy will now remain soft forever" %}
+{% include image.html url="/assets/img/soft.jpg" description="Permanently soft semi cured epoxy (in the finished piece)" %}
 
 Its a silly mistake but its worth saying: make sure you mix the epoxy correctly. Use scales, measuring cups, calculators &ndash; do what you have to do. If you don't mix it properly it will never cure, and you won't know it until the soft paste is in your piece. I made this mistake with one pour. Luckily I was only filling some smaller cracks, so its not obvious where the soft parts are on the finished product unless you know where they are.
 
-{% include image.html url="/assets/img/vertical-bubbles.jpg" description="These bubbles wouldn't have gotten stuck on the top side if the slab was the right way up when pouring the epoxy" %}
+{% include image.html url="/assets/img/vertical-bubbles.jpg" description="Bubbles stuck underneath a peak (but actually above a trough)" %}
 
 I poured the epoxy with the desk upside down. I think the right way up would have worked better. A place where you can see bubbles from above is a place where a bubble has space to rise to the surface and pop. But as you can see there are places where bubbles are visible from underneath but cannot rise. Also, there is no chance that a fold in the tape will get stuck in the epoxy on the top side, because there is no tape on the top side.
 
@@ -69,7 +69,7 @@ In hindsight I can see why it is common to tint the epoxy (even with a dark brow
 
 The first coat of sanding after filling in the larger cracks is the only time its necessary to remove a lot of material. Inevitably there will be large areas where the epoxy is above the original surface of the wood, and these puddles need to be sanded away to get back to the wood.
 
-{% include image.html url="/assets/img/belt-scratches.jpg" description="These scratches made by the belt sander take a while to clean up" %}
+{% include image.html url="/assets/img/belt-scratches.jpg" description="Scratches made by the belt sander" %}
 
 I used a belt sander with 40 grit sanding belts for this purpose. This was very fast, but I can confirm that belt sanders can also cause a lot of damage very fast, so its important to maintain even pressure, use an appropriate pattern of movement, and avoid mistakes like rolling it over the edges or leaving it running in one position.
 
@@ -77,7 +77,7 @@ I found that sanding can expose more gaps in the wood, and it pays to touch thes
 
 ## Epoxying other faces
 
-{% include image.html url="/assets/img/empty-cracks.jpg" description="Quite a few unfilled cracks on the top side (underneath for the first pour)" %}
+{% include image.html url="/assets/img/empty-cracks.jpg" description="Unfilled cracks on the top side (underneath for the first pour)" %}
 
 In my slab, the epoxy poured from the bottom face was able to reach most of the gaps in slab, but there were still some smaller gaps visible from other faces which were not filled in this stage. To fill these I did some additional pours at different angles.
 

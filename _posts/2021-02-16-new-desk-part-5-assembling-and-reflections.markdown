@@ -48,3 +48,5 @@ In my opinion, my new desk is awesome, and it serves its purpose wonderfully. I 
 Besides its utility, It looks beautiful. This is mostly just down to it being made from a huge piece of wood &ndash; but I'm happy that I didn't fuck it up too much. Whenever I am bored, or waiting for code to compile, I gaze at the grain and try to imagine the tree and how it grew that way.
 
 Despite that it has many imperfections. There are filled cracks where the epoxy is permanently soft, delaminations between layers of epoxy, cracks that were not filled, epoxy shrinkage, bubbles, a splotchy surface on the edges, a minor warp, and probably more issues that I've forgotten or haven't noticed. But none of these things ruin it. They remind me that I made it myself.
+
+{% include image.html url="/assets/img/success.jpg" %}
