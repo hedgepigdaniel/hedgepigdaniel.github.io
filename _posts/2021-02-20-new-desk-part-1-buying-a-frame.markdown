@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Making a new desk (part 1): Choosing a frame"
-date:   2021-02-16 11:33:00 +1100
+date:   2021-02-20 00:10:00 +1100
 category: blogging
 tags: [desk, ergonomics]
 description: Why most desks are the wrong height
@@ -37,4 +37,4 @@ I wanted my desk to have an adjustable height to accommodate a comfortable and h
 
 ## Next step: making a tabletop
 
-A desk frame isn't much use without a tabletop. For the tabletop I decided to take a more ambitious route and make it myself. Read more in [part 2]({% post_url 2021-02-16-new-desk-part-2-finding-a-slab %}).
+A desk frame isn't much use without a tabletop. For the tabletop I decided to take a more ambitious route and make it myself. Read more in [part 2]({% post_url 2021-02-20-new-desk-part-2-finding-a-slab %}).

@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "Making a new desk (part 2): Buying a timber slab"
-date:   2021-02-16 11:33:00 +1100
+date:   2021-02-20 00:10:00 +1100
 category: blogging
 tags: [desk, "timber slab", eucalyptus, sydney]
 description: Shopping for a Eucalyptus timber slab in Sydney to build a desk
 ---
 
-In [part 1]({% post_url 2021-02-16-new-desk-part-1-buying-a-frame %}) of this series I bought a desk frame, but I didn't buy a tabletop to rest on it. That's because I made my own out of a solid slab of Eucalyptus. What follows for the next few posts is not so much a how to, but an account of my journey making the tabletop. I'm an amateur and I was doing many things for the first time, so this includes many mistakes I made along the way.
+In [part 1]({% post_url 2021-02-20-new-desk-part-1-buying-a-frame %}) of this series I bought a desk frame, but I didn't buy a tabletop to rest on it. That's because I made my own out of a solid slab of Eucalyptus. What follows for the next few posts is not so much a how to, but an account of my journey making the tabletop. I'm an amateur and I was doing many things for the first time, so this includes many mistakes I made along the way.
 
 ## Finding a slab
 
@@ -47,7 +47,7 @@ So I had the shop level the faces of the slab and cut it to shape, and decided t
 
 A week later I went to pick up my dressed slab. It had become significantly thinner, and some of the gaps turned out to be larger then they originally appeared. There was a small area of rot, but it seemed dry and still hard enough to be a desk. It also smelled really great.
 
-And so I had successfully acquired a slab! In [part 3]({% post_url 2021-02-16-new-desk-part-3-gap-filling-and-sanding %}) of this series I'll write about the next steps &ndash; filling the gaps, sanding, and shaping the slab.
+And so I had successfully acquired a slab! In [part 3]({% post_url 2021-02-20-new-desk-part-3-gap-filling-and-sanding %}) of this series I'll write about the next steps &ndash; filling the gaps, sanding, and shaping the slab.
 
 [gonaturaltimbers]: https://www.gonaturaltimbers.com.au/
 [saligna]: https://en.wikipedia.org/wiki/Eucalyptus_saligna

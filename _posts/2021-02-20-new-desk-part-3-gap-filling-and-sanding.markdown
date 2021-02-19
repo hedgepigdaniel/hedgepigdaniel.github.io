@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "Making a new desk (part 3): Gap filling with epoxy and sanding"
-date:   2021-02-16 11:33:00 +1100
+date:   2021-02-20 00:10:00 +1100
 category: blogging
 tags: ["timber slab", epoxy, sanding, mould]
 description: Filling gaps in a timber slab with epoxy, sanding, and edge shaping
 ---
 
-In [part 2]({% post_url 2021-02-16-new-desk-part-2-finding-a-slab %}) of this series I wrote about how I came into possession of a cut and dressed timber slab. With the slab in my possession, the first task was to turn it into an appropriate shape to be a desk. This included filling in various gaps, sanding surfaces, and rounding corners.
+In [part 2]({% post_url 2021-02-20-new-desk-part-2-finding-a-slab %}) of this series I wrote about how I came into possession of a cut and dressed timber slab. With the slab in my possession, the first task was to turn it into an appropriate shape to be a desk. This included filling in various gaps, sanding surfaces, and rounding corners.
 
 {% include image.html url="/assets/img/burl.jpg" description="Bruno's previous project" %}
 
@@ -113,7 +113,7 @@ I did the following progression of grits: 40, 60, 80, 120, 180, 240, 320. One of
 
 ## Onwards to finishing
 
-The slab was now in its final shape, so this concludes part 3 of the series. In [part 4]({% post_url 2021-02-16-new-desk-part-4-finishing %}), I'll write about the process of choosing and applying a finish to protect the wood and enhance the aesthetics.
+The slab was now in its final shape, so this concludes part 3 of the series. In [part 4]({% post_url 2021-02-20-new-desk-part-4-finishing %}), I'll write about the process of choosing and applying a finish to protect the wood and enhance the aesthetics.
 
 
 [fibreglasssales]: https://fiberglass-sales.com.au/

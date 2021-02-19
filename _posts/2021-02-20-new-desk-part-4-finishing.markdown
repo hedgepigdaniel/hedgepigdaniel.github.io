@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "Making a new desk (part 4): Choosing and applying a finish"
-date:   2021-02-16 11:33:00 +1100
+date:   2021-02-20 00:10:00 +1100
 category: blogging
 tags: ["timber slab", finishing, lacquer, "conversion varnish", "acid catalysed lacquer", "spray gun"]
 description: Finishing wood with acid catalysed lacquer and a cheap spray gun
 ---
 
-In [part 3]({% post_url 2021-02-16-new-desk-part-3-gap-filling-and-sanding %}) of this series I ended up with a tabletop for my desk that was in its final shape, with smooth sanded surfaces, gaps filled, and nicely rounded corners. The next step was to apply a finish to the wood in order to protect it from the elements, and to enhance its aesthetic qualities including the appearance and texture.
+In [part 3]({% post_url 2021-02-20-new-desk-part-3-gap-filling-and-sanding %}) of this series I ended up with a tabletop for my desk that was in its final shape, with smooth sanded surfaces, gaps filled, and nicely rounded corners. The next step was to apply a finish to the wood in order to protect it from the elements, and to enhance its aesthetic qualities including the appearance and texture.
 
 ## Choosing a finishing product
 
@@ -63,7 +63,7 @@ I thought it looked pretty awesome at this point, and I felt really satisfied be
 
 ## Next step: final assembly
 
-The finishing of the tabletop was now complete, so the next and final step was to assemble the desk. For this, as well as my overall reflections on the project, check out [part 5]({% post_url 2021-02-16-new-desk-part-5-assembling-and-reflections %}).
+The finishing of the tabletop was now complete, so the next and final step was to assemble the desk. For this, as well as my overall reflections on the project, check out [part 5]({% post_url 2021-02-20-new-desk-part-5-assembling-and-reflections %}).
 
 [fibreglasssales]: https://fiberglass-sales.com.au/
 [c600ps]: https://sydneytools.com.au/product/chicago-air-c600ps-600w-1000ml-power-paint-spray-gun

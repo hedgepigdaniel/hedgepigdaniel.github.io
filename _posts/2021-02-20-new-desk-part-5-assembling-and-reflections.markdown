@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "Making a new desk (part 5): Assembly and final reflections"
-date:   2021-02-16 11:33:00 +1100
+date:   2021-02-20 00:10:00 +1100
 category: blogging
 tags: ["timber slab"]
 description: Reflections on building a desk from a timber slab
 ---
 
-In [part 4]({% post_url 2021-02-16-new-desk-part-4-finishing %}) I wrote about the process of choosing and applying a finish to my timber slab desk tabletop. There was now only a ceremonial amount of work left to attach the tabletop to the frame, and my desk would be complete.
+In [part 4]({% post_url 2021-02-20-new-desk-part-4-finishing %}) I wrote about the process of choosing and applying a finish to my timber slab desk tabletop. There was now only a ceremonial amount of work left to attach the tabletop to the frame, and my desk would be complete.
 
 ## Attaching the frame
 
