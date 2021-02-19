@@ -11,7 +11,7 @@ Like many people I spend a really huge amount of time working at a desk, so I th
 
 This desk served me well for many years. More recently though, I started to experience pain in various places and I realised that it was caused by sitting at my desk. Some of this pain was in my wrist and hands, and this I solved by changing my keyboard and mouse. But some of it was in my back and legs. I guessed that this was related to the slouchy posture that I tended to fall into when working at my desk. Although I tried, I struggled to remain seated with my back straight and feet flat on the floor for any length of time.
 
-So I decided to build myself a new desk. In this first part, I'll talk about choosing the frame, and in subsequent parts I'll talk about building the tabletop.
+So I decided to build myself a new desk. In this first part, I'll write about choosing the frame, and in subsequent parts I'll write about building the tabletop.
 
 ## The convention is wrong
 

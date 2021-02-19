@@ -11,7 +11,10 @@ In [part 4]({% post_url 2021-02-16-new-desk-part-4-finishing %}) I wrote about t
 
 ## Attaching the frame
 
-Rather than screwing the frame directly into the slab, I used socket head screws as an intermediate layer between the screws and the wood. I used epoxy to glue the sockets into holes in the slab. This was more effort, but I didn't want any risk of cracking the slab, and I figured this way would distribute the force more evenly on a larger area of wood.
+{% include image.html url="/assets/img/socket.jpg" description="Nobody knows what these cork screw things are called" %}
+
+
+Rather than screwing the frame directly into the slab, I used socket head screws as an intermediate layer between the screws and the wood. I used fast 5 minute curing epoxy to glue the sockets into holes in the slab. This was more effort, but I didn't want any risk of cracking the slab, and I figured this way would distribute the force more evenly on a larger area of wood.
 
 {% include image.html url="/assets/img/legs.jpg" description="The finished product" %}
 
@@ -29,10 +32,10 @@ An incomplete set of approximate costs (AUD):
  - Sanding disks and foam backing pads: $150
  - Finishing products: $260
  - Spray gun, masks, and goggles: $150
- - Fastenings for assembly: $20
+ - Fastenings for assembly: $40
  - Access to many tools and materials that I already had or borrowed, about 100 hours of my time, and 20 hours of Bruno's time: priceless
 
-That's a total of about $2069. If I remember correctly, Go Natural Timbers suggested a ballpark figure of $2500 for the cost of producing the tabletop themselves. This number was slightly shocking to me when I heard it, but having done this project I have a new appreciation for the costs that would be involved. A professional workshop can no doubt have many of the materials much cheaper. For example, I bought packs of 10 sanding disks of each grit only to use 1-2, and a 4 litre pack of epoxy to use only 2 litres. They would buy everything in large quantities and only use as much as necessary for each job. But on the other hand they have to pay for the labour, maintain a workshop, etc, and turn a profit. Overall I probably saved a small proportion of the cost by doing most of the work myself, but I definitely wouldn't embark on this kind of project to save money!
+That's a total of about $2089. If I remember correctly, Go Natural Timbers suggested a ballpark figure of $2500 for the cost of producing the tabletop themselves. This number was slightly shocking to me when I heard it, but having done this project I have a new appreciation for the costs that would be involved. A professional workshop can no doubt have many of the materials much cheaper. For example, I bought packs of 10 sanding disks of each grit only to use 1-2, and a 4 litre pack of epoxy to use only 2 litres. They would buy everything in large quantities and only use as much as necessary for each job. But on the other hand they have to pay for the labour, maintain a workshop, etc, and turn a profit. Overall I probably saved a small proportion of the cost by doing most of the work myself, but I definitely wouldn't embark on this kind of project to save money!
 
 ### Experience
 
