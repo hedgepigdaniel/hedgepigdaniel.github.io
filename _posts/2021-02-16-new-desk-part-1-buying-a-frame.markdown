@@ -31,7 +31,7 @@ It gets worse though &ndash; even adjustable height sit/stand desks rarely go lo
 
 ## Choosing a desk frame
 
-I wanted my desk to have an adjustable height to accommodate a comfortable/healthy position seated and standing, so I decided to buy a desk frame. I bought the [UpDown desk pro series][updown]. This is a sturdy electric height adjustable desk, of the sort with 3 segment telescopic legs. It's able to go down to 61.5cm (subject to the table top thickness), which can accommodate most humans comfortably without a foot stool (not just an uncommonly tall person). It arrived quickly and was very easy to assemble.
+I wanted my desk to have an adjustable height to accommodate a comfortable and healthy position seated and standing, so I decided to buy a desk frame. I bought the [UpDown desk pro series][updown]. This is a sturdy electric height adjustable desk frame , of the sort with 3 segment telescopic legs. It's able to go down to 61.5cm (subject to the table top thickness), which can accommodate most humans comfortably without a foot stool (not just an uncommonly tall person). It arrived quickly and was very easy to assemble.
 
 [updown]: https://updowndesk.com.au/collections/standing-desks-pro-series/products/updown-desk-pro-series-electric-standing-desk-frame-only
 

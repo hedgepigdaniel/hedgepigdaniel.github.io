@@ -11,7 +11,7 @@ In [part 2]({% post_url 2021-02-16-new-desk-part-2-finding-a-slab %}) of this se
 
 {% include image.html url="/assets/img/burl.jpg" description="Bruno's previous project" %}
 
-My brother Bruno had previously built a coffee table out of a burl, and he gave me a hand particularly with this part of the project. Apart from lots of advice and lending me a lot of tools, he helped me with the mould and epoxy pouring, which sounds like it was the hardest part of his coffee table.
+My brother Bruno had previously built a coffee table out of a burl (a burl is to a tree what a tumour is to an animal). Bruno gave me a hand with my project &ndash; apart from lots of advice and lending me a lot of tools, he helped me with the mould and epoxy pouring, which sounds like it was the hardest part of his coffee table.
 
 ## Cleaning and preparing
 
@@ -21,7 +21,7 @@ We decorated the cracks by charring the inside edges with a blowtorch. This crea
 
 ## Building a mould
 
-The mould prevents the epoxy from escaping while it sets in the slab. To build the mould we used a [single piece of Melamine][melamine] which we bought from Bunnings. Bunnings provides a free cutting service, so it was cut mostly to shape at the store, which meant that it fit in my car and we had less cutting to do.
+The mould prevents the epoxy from escaping while it sets in the slab. To build the mould we used a [single piece of melamine][melamine] which we bought from Bunnings. Bunnings provides a free cutting service, so it was cut mostly to shape at the store, which meant that it fit in my car and we had less cutting to do.
 
 {% include image.html url="/assets/img/mould.jpg" description="Bruno, next to the mould" %}
 
@@ -33,7 +33,7 @@ There are lots of opinions about what kind of adhesive tape should be used to se
 
 {% include image.html url="/assets/img/cross-tape.jpg" description="After demoulding: channels of epoxy that seeped through grooves between layers of tape" %}
 
-One issue I faced later is that the epoxy is able spread down the grooves in between strips of tape. For this reason, I think it would have worked better to apply the tape in the direction of the grain. This would mean that any epoxy which travels down the grooves is unlikely to spread far from the crack it leaked out from.
+One issue I faced later is that the epoxy is able to spread down the grooves in between strips of tape. For this reason, I think it would have worked better to apply the tape in the direction of the grain. This would mean that any epoxy which travels down the grooves is unlikely to spread far from the crack it leaked out from.
 
 {% include image.html url="/assets/img/demould.jpg" description="Leakage and sticking where the warp caused the slab to rise above the mould" %}
 
@@ -43,9 +43,9 @@ In hindsight, it would have been worthwhile to set up some vices to hold the sla
 
 ## Pouring epoxy
 
-I used two different epoxies &ndash; one which was left over from Bruno's coffee table ([Fibreglass Sales][fibreglasssales] Epoxy 2020) and another which I bought for this project ([Barnes Megapour][megapour]). I discovered later that using two epoxies was a risk, because there are many different types of epoxies, and not all of them can form a chemical bond with each other. It was also a mistake to do the first pour before buying enough to finish the job. Each pour needs to be done before the previous pour has fully cured, because this allows a chemical bond to form between the layers. Like most glue, epoxy does not stick well to smooth surfaces, including unsanded epoxy!
+I used two different epoxies &ndash; one which was left over from Bruno's coffee table ([Fibreglass Sales][fibreglasssales] Epoxy 2020) and another which I bought for this project ([Barnes Megapour][megapour]). I discovered later that using two epoxies was a risk, because there are many different types with different compositions, and not all of them can form a chemical bond with each other. It was also a mistake to do the first pour before buying enough to finish the job. Each pour needs to be done before the previous pour has fully cured, because this allows a chemical bond to form between the layers. Like most glue, epoxy does not stick well to smooth surfaces, including unsanded epoxy!
 
-There are many different kinds of epoxy. They vary in terms of their curing time, endotherm, viscosity, shrinkage during cure, clarity, UV yellowing resistance, and more. I chose not to dye the epoxy and allow the fill to be transparent. This means that there is no need to mix in dye, but also that bubbles and yellowing (including UV induced yellowing) is more visible. So it was useful to choose a UV resistant epoxy, which Barnes Megapour is.
+There are many different kinds of epoxy. They vary in terms of their curing time, endotherm, viscosity, shrinkage during cure, clarity, UV yellowing resistance, and more. I chose to allow the fill to be transparent, and not to add any dye. This avoids the need to buy and mix in dye, but also makes bubbles and yellowing (including UV induced yellowing) is more visible. So it was useful to choose a UV resistant epoxy. Barnes Megapour is, but Fibreglass Sales Epoxy 2020 is not.
 
 {% include image.html url="/assets/img/wet-bubbles.jpg" description="Small bubbles emerging from charred wood" %}
 
@@ -53,15 +53,15 @@ Another consideration is the curing speed, which is closely related to the endot
 
 {% include image.html url="/assets/img/fill1.jpg" description="The first pour of epoxy (about half the depth)" %}
 
-It's important not to pour too much depth at once, because the endothermic curing reaction can cause the epoxy to overheat and cure too fast. This results in the epoxy changing shape after it has hardened, which causes stress and uneven surfaces. The staff at the timber shop told me that in their pieces they typically pour 5 separate layers. My experience confirms that this is a good idea. With the 2020 epoxy, pouring too much at once (more than about 1-2cm) results in bubbles and shrinkage after cure. Barnes Megapour actually shrinks more (subjectively), but it does so before it hardens. But the result of this is that no matter how carefully you fill in all the cracks, the epoxy always sinks in further just before it hardens, so without any permanent impact. But still, even with deep pouring epoxy, you need to do multiple pours. You may as well do them at a consistent depth and minimise bubbles.
+It's important not to pour too much depth at once, because the endothermic curing reaction can cause the epoxy to overheat and cure too fast. This results in the epoxy changing shape after it has hardened, which causes stress and uneven surfaces. The staff at the timber shop told me that in their pieces they typically pour 5 separate layers. My experience confirms that this is a good idea. With the 2020 epoxy, pouring too much at once (more than about 1-2cm) results in bubbles and shrinkage after cure. Barnes Megapour actually shrinks more (subjectively), but it does so before it hardens, so without any permanent impact. But the result of this is that no matter how carefully you fill in all the cracks the first time, the epoxy always sinks in further just before it hardens. So even with deep pouring epoxy, you need to do multiple pours. You may as well do them at a consistent depth and minimise bubbles.
 
 {% include image.html url="/assets/img/soft.jpg" description="Permanently soft semi cured epoxy (in the finished piece)" %}
 
-Its a silly mistake but its worth saying: make sure you mix the epoxy correctly. Use scales, measuring cups, calculators &ndash; do what you have to do. If you don't mix it properly it will never cure, and you won't know it until the soft paste is in your piece. I made this mistake with one pour. Luckily I was only filling some smaller cracks, so its not obvious where the soft parts are on the finished product unless you know where they are.
+Its a silly mistake but its worth saying: make sure you mix the epoxy correctly. Use scales, measuring cups, calculators &ndash; do what you have to do. If you don't mix it properly it will never cure, and you won't know it until the soft paste is in your piece. I made this mistake with one pour. Luckily I was only filling some smaller cracks, so the soft parts on the finished product are not obvious unless you know where they are.
 
 {% include image.html url="/assets/img/vertical-bubbles.jpg" description="Bubbles stuck underneath a peak (but actually above a trough)" %}
 
-I poured the epoxy with the desk upside down. I think the right way up would have worked better. A place where you can see bubbles from above is a place where a bubble has space to rise to the surface and pop. But as you can see there are places where bubbles are visible from underneath but cannot rise. Also, there is no chance that a fold in the tape will get stuck in the epoxy on the top side, because there is no tape on the top side.
+We poured the epoxy with the desk upside down. I think the right way up would have worked better. A place where you can see bubbles from above is a place where bubbles have space to rise to the surface and pop. But as you can see there are places where bubbles are visible from underneath but cannot rise. Also, there is no chance that a fold in the tape will get stuck in the epoxy on the top side, because there is no tape on the top side.
 
 In hindsight I can see why it is common to tint the epoxy (even with a dark brown colour which does not stand out). There are a lot of visual imperfections that can happen in epoxy pouring, and a tint hides most of them.
 
@@ -71,11 +71,11 @@ The first coat of sanding after filling in the larger cracks is the only time it
 
 {% include image.html url="/assets/img/belt-scratches.jpg" description="Scratches made by the belt sander" %}
 
-I used a belt sander with 40 grit sanding belts for this purpose. This was very fast, but I can confirm that belt sanders can also cause a lot of damage very fast, so its important to maintain even pressure, use an appropriate pattern of movement, and avoid mistakes like rolling it over the edges or leaving it running in one position.
+We used a belt sander with 40 grit sanding belts for this purpose. This was very fast, but I can confirm that belt sanders can also cause a lot of damage very fast, so its important to maintain even pressure, use an appropriate pattern of movement, and avoid mistakes like rolling it over the edges or leaving it running in one position. It's also important to adjust the rollers frequently, otherwise the machine will happily sand itself and self destruct.
 
 I found that sanding can expose more gaps in the wood, and it pays to touch these up with epoxy later. This should be done as late as possible in the sanding process, but not so late that you need to repeat a coat of sanding. I'm not sure when that would be. I continued to use a 40 grit sanding belt after my final epoxy touch ups, but I suspect that doing it after one of the early coats with the random orbital sander would have left less unfilled cracks.
 
-## Epoxying other faces
+## Filling other faces
 
 {% include image.html url="/assets/img/empty-cracks.jpg" description="Unfilled cracks on the top side (underneath for the first pour)" %}
 
@@ -89,9 +89,9 @@ For these pours, there was no need for a complete mould. Although were some gaps
 
 ## Shaping the edges
 
-For the cut edges, I took up an offer from Go Natural Timbers to use a router to round the corners. They also showed me how to roll a random orbital sander over corners to round them, which is what I did to round the corners of the natural edge. They seemed to not be too shocked by my work so far, which was reassuring.
+For the cut edges, I took up an offer from Go Natural Timbers to use a router to round the corners. They also showed me how to roll a random orbital sander over corners to round them, which is what I did to round the corners of the natural edge. They seemed not to be too shocked by the work so far, which was reassuring. In fact they said: "nothing there that can't be fixed".
 
-The natural edge was one of the harder parts of the project, and is probably the area with the largest issues in the finished product. The soft/uncured epoxy ended up in the natural edge, and there are also some cracks where subsequent layers of epoxy didn't bond and have since separated. The varying angle of the natural edge made it more difficult to pour very much epoxy at once, and increased the risk of these mistakes.
+The natural edge was one of the harder parts of the project, and is probably the area with the largest issues in the finished product. The incorrectly mixed epoxy ended up in the natural edge, and there are also some cracks where subsequent layers of epoxy didn't bond and have since separated. The varying angle of the natural edge made it more difficult to pour very much epoxy at once, and increased the risk of these mistakes.
 
 {% include image.html url="/assets/img/edge-cracks.jpg" %}
 
@@ -99,15 +99,15 @@ The natural edge was one of the harder parts of the project, and is probably the
 
 {% include image.html url="/assets/img/edge-scratches.jpg" %}
 
-I tried to fill in every last crack in the natural edge, and in doing so covered the entire surface in epoxy. I then had to remove this epoxy using wire brush drill attachments and a random orbital sander, which resulted in more of the wood being removed than I would have liked. I think a lighter touch with the epoxy (as well as avoiding basic mistakes) would have created a better result. Perhaps also a finer/softer wire brush could have removed some discoloured wood from the surface without creating such deep scratches.
+I tried to fill in every last crack in the natural edge, and in doing so covered the entire surface in epoxy. I then had to remove this epoxy using wire brush drill attachments and a random orbital sander, which resulted in more of the wood being removed than I would have liked. I think a lighter touch with the epoxy (even at the expense of leaving some small cracks unfilled) would have removed the need for such aggressive use of the wire brush attachment and sanding, and preserved the natural appearance better. Perhaps also a finer/softer wire brush could have removed some discoloured wood from the surface without creating such deep scratches.
 
 ## Final sanding
 
-For the later coats of sand, I used a random orbital sander. This machine is much slower than the belt sander, but also much easier to use, and produces much better results with minimal visible scratches. I found that it was worth repeating the same grit that was done with the belt sander. In my case it took a long time with the random orbital sander at 40 grit to remove the scratches made by the belt sander at 40 grit. I think it might even be worth going down a step or two, for example using 60-80 grit with the belt sander and then switching to the random orbital sander at 40 grit.
+For the later coats of sand, I used a random orbital sander. This machine is much slower than the belt sander, but also much easier to use, and produces much better results with minimal visible scratches. I found that it was worth repeating the same grit that was done with the belt sander. In my case it took a long time with the random orbital sander at 40 grit to remove the scratches made by the belt sander at 40 grit, and the result was much smoother. I think it might even be worth going down a step or two, for example using 60-80 grit with the belt sander and then switching to the random orbital sander at 40 grit.
 
-I found that using a foam backing pad reduced noise and vibration and produced less visible scratches. It was also useful to allow the sanding disc to wrap around the corners and the natural edge. Take care to get a backing pad and sanding discs with size and hole positions matching the sander &ndash; otherwise things will get very dusty. Finer sanding grits produce much less sawdust, but it is finer and more irritating.
+I found that using a foam backing pad reduced noise and vibration and produced less visible scratches. It was also useful to allow the sanding disc to wrap around the corners and over the natural edge. Take care to get a backing pad and sanding discs with size and hole positions matching the sander &ndash; otherwise things will get very dusty. Finer sanding grits produce much less sawdust, but it is finer and more irritating.
 
-I did the following progression of grits: 40, 60, 80, 120, 180, 240, 320. One of the carpenters at Go Natural Timbers told me that it was necessary to go up to 180 for an epoxy finish (which is a deep coating), and 240 for a lacquer finish (typically a very shallow coating). The finer grits don't take as long though, so it doesn't matter too much. It's hard to capture in photos, but in real life the sanding makes the wood look much better &ndash; all the small details in the grain become visible.
+I did the following progression of grits: 40, 60, 80, 120, 180, 240, 320. One of the carpenters at Go Natural Timbers told me that it was necessary to go up to 180 for an epoxy finish (which is a deep coating), and 240 for a lacquer finish (typically a very shallow coating). The finer grits don't take as long though, so it made sense to go slightly further. It's hard to capture in photos, but in real life the sanding makes the wood look much better &ndash; all the small details in the grain become visible.
 
 {% include image.html url="/assets/img/sanded.jpg" description="Sanding complete and corners rounded" %}
 
