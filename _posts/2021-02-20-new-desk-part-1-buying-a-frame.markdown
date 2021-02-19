@@ -25,7 +25,7 @@ There seems to be lots of agreement that a good seating position involves the fo
 
 Basically every fixed height desk is 74cm (about 29 inches) high. People obviously vary in height but I am 183cm tall, which is above average. If I adjust the height of my chair and sit in it such that my body position matches the recommendations, the distance from the bottom of my elbows to the floor is 69cm. If my forearms are to be level and resting on a keyboard which is on my desk, then the height of my desk would have to be 69cm, less the height of my keyboard. This means that the 74cm standard height of desks is too high for almost all humans.
 
-{% include image.html url="/assets/img/ergonomics.jpg" description="183cm tall human (left), ergonomic seating position (centre), result of standard 74cm height desk (right)" %}
+{% include image.html url="assets/img/ergonomics.jpg" description="183cm tall human (left), ergonomic seating position (centre), result of standard 74cm height desk (right)" %}
 
 It gets worse though &ndash; even adjustable height sit/stand desks rarely go lower than 70-74cm. This is still too high, even for a relatively tall person like me! Fortunately there are some adjustable height desks that go low enough for most people. Typically these are the ones that have 3 segments in the telescopic legs, rather than just 2. They are more expensive, but at least they can be adjusted to the right height.
 

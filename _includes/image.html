@@ -1,9 +1,7 @@
 <figure class="image">
-    <img
-        src="{{ include.url }}"
-        alt="{{ include.description }}"
-        width="{% imagesize {{ include.url }}:width %}"
-        height="{% imagesize {{ include.url }}:height %}"
-    >
+    {% responsive_image_block %}
+        path: "{{ include.url }}"
+        alt: "{{ include.description }}"
+    {% endresponsive_image_block %}
     <figcaption>{{ include.description }}</figcaption>
 </figure>

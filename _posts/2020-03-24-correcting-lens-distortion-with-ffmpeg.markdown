@@ -18,11 +18,11 @@ I decided to make a first attempt using FFMpeg. FFMpeg is easy to get started wi
 
 To test the various filters, I took a picture of the OpenCV chessboard calibration pattern, which looks like this:
 
-{% include image.html url="/assets/img/chess-pattern.png" description="OpenCV chessboard pattern" %}
+{% include image.html url="assets/img/chess-pattern.png" description="OpenCV chessboard pattern" %}
 
 The photo of the pattern (which was on a TV screen, which is flat), looks like this:
 
-{% include image.html url="/assets/img/chess-raw.png" description="Original photo of chessboard pattern" %}
+{% include image.html url="assets/img/chess-raw.png" description="Original photo of chessboard pattern" %}
 
 If you didn't know that the test image was a chess board, it wouldn't be obvious that in real life its all straight lines and right angles. My aim is to take this image from the camera, and produce an output that looks (geometrically) like the test image.
 
@@ -38,7 +38,7 @@ Obviously I'm not the first person to have this problem, and consequently I foun
 $ ffmpeg -i chess-raw.png -vf lenscorrection=k1=-0.227:k2=-0.022 chess-lenscorrection-so.png
 ```
 
-{% include image.html url="/assets/img/chess-lenscorrection-so.png" description="chessboard corrected with lenscorrection filter using parameters from stack overflow" %}
+{% include image.html url="assets/img/chess-lenscorrection-so.png" description="chessboard corrected with lenscorrection filter using parameters from stack overflow" %}
 
 You could reasonably say that this is much worse than the raw image, even though in a sense it is closer to the ideal.
 
@@ -73,7 +73,7 @@ If $b=k_1$, these equations are "almost" the same. Unfortunately I couldn't get 
 $ ffmpeg -i chess-raw.png -vf lenscorrection=k1=-0.08101:k2=0 chess-lenscorrection-hugin.png
 ```
 
-{% include image.html url="/assets/img/chess-lenscorrection-hugin.png" description="chessboard corrected with lenscorrection filter using parameters from Hugin" %}
+{% include image.html url="assets/img/chess-lenscorrection-hugin.png" description="chessboard corrected with lenscorrection filter using parameters from Hugin" %}
 
 Obviously, this didn't work well at all. I'm not sure where I went wrong.
 
@@ -90,7 +90,7 @@ After some experimentation, I worked out that the parameters in the database wer
 $ ffmpeg -i chess-raw.png -vf 'lensfun=make=GoPro:model=HERO5 Black:lens_model=fixed lens:mode=geometry:target_geometry=rectilinear' chess-lensfun.png
 ```
 
-{% include image.html url="/assets/img/chess-lensfun.png" description="chessboard corrected with lensfun" %}
+{% include image.html url="assets/img/chess-lensfun.png" description="chessboard corrected with lensfun" %}
 
 ### scale parameter
 Correcting for geometric lens distortion is a process that warps the image - i.e. it "moves" pixels from the source image to a different location in the destination image - or put another way, it maps pixels in the destination image to a different point in the source image. This means that the rectangular source image will not necessarily be mapped to a rectangle in the destination image. So there is a compromise to be made when choosing the scale of the output - either the output can be rectangular and have no blank areas (at the expense of discarding some of the input image), or it can include the entire input image (at the expense of having some blank areas in the output). Lensfun has a parameter called `scale` which controls this compromise. Unfortunately the FFMpeg filter wrapping lensfun did not have such an option. So I made a [patch][ffmpeg-scale-patch] to add the option and pass it through to lensfun. This patch has been applied (hooray), so the following now works:
@@ -99,7 +99,7 @@ Correcting for geometric lens distortion is a process that warps the image - i.e
 $ ffmpeg -i chess-raw.png -vf 'lensfun=make=GoPro:model=HERO5 Black:lens_model=fixed lens:mode=geometry:target_geometry=rectilinear:scale=0.4' chess-lensfun-scaled.png
 ```
 
-{% include image.html url="/assets/img/chess-lensfun-scaled.png" description="chessboard corrected with lensfun, scaled to display entire input" %}
+{% include image.html url="assets/img/chess-lensfun-scaled.png" description="chessboard corrected with lensfun, scaled to display entire input" %}
 
 ### interpolation
 The default interpolation is bilinear, which is acceptable, and looks much better than the nearest neighbour interpolation as used in the lenscorrection filter. But lensfun also supports lanczos interpolation, which in theory should be better. I suspect there is a bug in it though, because the result doesn't look as good as the default:
@@ -108,7 +108,7 @@ The default interpolation is bilinear, which is acceptable, and looks much bette
 $ ffmpeg -i chess-raw.png -vf 'lensfun=make=GoPro:model=HERO5 Black:lens_model=fixed lens:mode=geometry:target_geometry=rectilinear:interpolation=lanczos' chess-lensfun-lanczos.png
 ```
 
-{% include image.html url="/assets/img/chess-lensfun-lanczos.png" description="chessboard corrected with lensfun, using lanczos interpolation" %}
+{% include image.html url="assets/img/chess-lensfun-lanczos.png" description="chessboard corrected with lensfun, using lanczos interpolation" %}
 
 The lensfun filter is significantly slower than the lenscorrection filter, but did a much better job (more accurate corrections, and better interpolation). It also provides the ability to choose from multiple projections for the output (e.g. correct for the imperfections in the lens but maintain the stereographic projection, or output a equirectangular projection instead, etc), which I found interesting.
 
@@ -130,7 +130,7 @@ After I did most of these experiments, the [v360 filter][v360] was added to ffmp
 $ ffmpeg -i chess-raw.png -vf 'v360=input=sg:ih_fov=122.6:iv_fov=94.4:output=flat:d_fov=149.2:pitch=-90:w=320:h=240' chess-v360.png
 ```
 
-{% include image.html url="/assets/img/chess-v360.png" description="chessboard corrected with v360, scaled to display entire input" %}
+{% include image.html url="assets/img/chess-v360.png" description="chessboard corrected with v360, scaled to display entire input" %}
 
 This is not perfect (since my camera does not produce a perfect stereographic projection), but in my opinion it doesn't look too bad. The curviness is less noticeable in the central area of the image, so if you adjust the output field of view enough that there are no unmapped areas, it looks better:
 
@@ -138,7 +138,7 @@ This is not perfect (since my camera does not produce a perfect stereographic pr
 $ ffmpeg -i chess-raw.png -vf 'v360=input=sg:ih_fov=122.6:iv_fov=94.4:output=flat:d_fov=121:pitch=-90:w=320:h=240' chess-v360-zoom.png
 ```
 
-{% include image.html url="/assets/img/chess-v360-zoom.png" description="chessboard corrected with v360, scaled to fill entire output" %}
+{% include image.html url="assets/img/chess-v360-zoom.png" description="chessboard corrected with v360, scaled to fill entire output" %}
 
 Roughly, v360 works in three stages. Firstly, it maps each input pixel to a vector, which represents the direction where the light came from (this is the inverse of the input projection). Then it optionally changes the camera angle according to the yaw/pitch/roll options (i.e. the direction vector for each pixel is rotated equally). This is different from cropping/translating the projected image because it moves the center of the image which all the projections are relative to. As a result, the resulting projected image looks exactly like it would have looked if the camera was facing in a different direction. The final step is to map these vectors to the destination image according to the chosen output projection and field of view. Here's an example of using the rotation parameters to turn the virtual camera downwards by 15 degrees:
 
@@ -146,7 +146,7 @@ Roughly, v360 works in three stages. Firstly, it maps each input pixel to a vect
 $ ffmpeg -i chess-raw.png -vf 'v360=input=sg:ih_fov=122.6:iv_fov=94.4:output=flat:d_fov=149.2:pitch=-105:w=320:h=240' chess-v360-down.png
 ```
 
-{% include image.html url="/assets/img/chess-v360-down.png" description="chessboard corrected with v360, rotated down by 15 degrees" %}
+{% include image.html url="assets/img/chess-v360-down.png" description="chessboard corrected with v360, rotated down by 15 degrees" %}
 
 When I originally wrote this post, I found a few small but annoying bugs in the filter, which [have since been fixed](#bug-update):
 - Although it can deduce the horizontal/vertical field of view if only the diagonal field of view is privided, it did not correctly do this unless the input projection was "fisheye" or "flat" (rectilinear), because that code [was not implemented at the time][v360-missing-fov]. I worked around this problem by directly providing the horizontal and vertical field of view as parameters.
@@ -168,7 +168,7 @@ If you don't care about speed, you could use both lensfun (to perform accurate c
 $ ffmpeg -i chess-raw.png -vf 'lensfun=make=GoPro:model=HERO5 Black:lens_model=fixed lens:mode=geometry:target_geometry=fisheye_stereographic,v360=input=sg:ih_fov=122.6:iv_fov=94.4:output=flat:d_fov=140:pitch=-105:w=320:h=240' chess-lensfun-v360.png
 ```
 
-{% include image.html url="/assets/img/chess-lensfun-v360.png" description="chessboard corrected with lensfun, and rotated with v360" %}
+{% include image.html url="assets/img/chess-lensfun-v360.png" description="chessboard corrected with lensfun, and rotated with v360" %}
 
 ## Conclusion
 
@@ -177,7 +177,7 @@ For my use case, I've found that using v360 is the best compromise. My camera pr
 In the future, I might write a similar post about video stabilisation. I'm also currently working on a project using libavcodec, OpenCL, and OpenCV that I hope will be capable of video decoding, lens correction, stabilisation, and reencoding all on the GPU, which should be much faster than all these methods which run on the CPU.
 
 
-{% include image.html url="/assets/img/zany-action.jpg" %}
+{% include image.html url="assets/img/zany-action.jpg" %}
 
 #### <a name="bug-update"></a>Update (April 11, 2020)
 

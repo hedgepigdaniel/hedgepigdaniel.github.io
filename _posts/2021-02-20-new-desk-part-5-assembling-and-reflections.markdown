@@ -11,12 +11,12 @@ In [part 4]({% post_url 2021-02-20-new-desk-part-4-finishing %}) I wrote about t
 
 ## Attaching the frame
 
-{% include image.html url="/assets/img/socket.jpg" description="Nobody knows what these cork screw things are called" %}
+{% include image.html url="assets/img/socket.jpg" description="Nobody knows what these cork screw things are called" %}
 
 
 Rather than screwing the frame directly into the slab, I used socket head screws as an intermediate layer between the screws and the wood. I used fast 5 minute curing epoxy to glue the sockets into holes in the slab. This was more effort, but I didn't want any risk of cracking the slab, and I figured this way would distribute the force more evenly on a larger area of wood.
 
-{% include image.html url="/assets/img/legs.jpg" description="The finished product" %}
+{% include image.html url="assets/img/legs.jpg" description="The finished product" %}
 
 ## Final reflections
 
@@ -49,4 +49,4 @@ Besides its utility, It looks beautiful. This is mostly just down to it being ma
 
 Despite that it has many imperfections. There are filled cracks where the epoxy is permanently soft, delaminations between layers of epoxy, cracks that were not filled, epoxy shrinkage, bubbles, a splotchy surface on the edges, a minor warp, and probably more issues that I've forgotten or haven't noticed. But none of these things ruin it. They remind me that I made it myself.
 
-{% include image.html url="/assets/img/success.jpg" %}
+{% include image.html url="assets/img/success.jpg" %}

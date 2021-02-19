@@ -25,7 +25,7 @@ So I took them at their word that the slabs on sale were dry and not decomposing
 
 I returned a week later and had a look at a few slabs. They are kept in stacks, with gaps in between for ventilation. The grain is not easily visible because the wood is rough, unfinished, and has been exposed for a long time. To help see the grain and colour, the staff sanded patches of a few slabs that I was interested in, and sprayed some oil on them to make the grain visible. Given what was available, the choice was between Camphor (of which there seemed to be an infinite supply), or a light coloured Eucalypt they referred to as "true blue gum" (the exact species was unknown). When I thought about it I realised I really wanted my desk to be made from a Eucalypt. Eucalypts are the dominant trees in most of Australia and especially around Sydney where I live. They are the trees that I see on bushwalks, that constantly amaze me with their infinitely varying shapes and colours, and their various impressive abilities like surviving bushfires and growing out of tiny cracks in cliff faces. They remind me of many of my favourite places.
 
-{% include image.html url="/assets/img/slab.jpg" description="The original slab, milled but undressed" %}
+{% include image.html url="assets/img/slab.jpg" description="The original slab, milled but undressed" %}
 
 So I chose the "true blue gum". It fit all my requirements, and it had a very irregular grain, and lots of knots and cracks. This would be terrible for anything structural, but great to look at. The tree must have been absolutely enormous. The photo shows only half of the log (the narrower half!), and the slabs underneath are closer to the middle of the trunk, and therefore wider. Even this piece led me to stray from my intended dimensions. The narrowest point was 75cm wide.
 
@@ -33,7 +33,7 @@ So I chose the "true blue gum". It fit all my requirements, and it had a very ir
 
 I don't know exactly what species the timber is, and it seemed like the staff at Go Natural Timbers didn't either. There are apparently many species that are referred to as "true blue gum". My brother is an arborist and suspects that it might be [Eucalyptus Saligna][saligna], and it seems like [Eucalyptus Globulus][globulus] is also a possibility.
 
-{% include image.html url="/assets/img/tree.jpg" description="Some unrelated but awesome trees I came across in Sydney" %}
+{% include image.html url="assets/img/tree.jpg" description="Some unrelated but awesome trees I came across in Sydney" %}
 
 ## Outsourcing
 
@@ -43,7 +43,7 @@ So I had the shop level the faces of the slab and cut it to shape, and decided t
 
 ## Delivery
 
-{% include image.html url="/assets/img/car.jpg" description="The dressed slab, in my physical possession!" %}
+{% include image.html url="assets/img/car.jpg" description="The dressed slab, in my physical possession!" %}
 
 A week later I went to pick up my dressed slab. It had become significantly thinner, and some of the gaps turned out to be larger then they originally appeared. There was a small area of rot, but it seemed dry and still hard enough to be a desk. It also smelled really great.
 
