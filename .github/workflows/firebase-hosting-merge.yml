@@ -20,7 +20,7 @@ jobs:
           path: |
             .jekyll-cache
             _site/generated/assets/img
-          key: ${{ runner.os }}-0
+          key: 0
       - run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
