@@ -4,6 +4,7 @@ title:  "Correcting lens distortion using FFMpeg"
 date:   2020-03-24 19:22:00 +1100
 categories: [blogging, ffmpeg, lensfun, v360, lenscorrection, fisheye, dodgeball]
 description: Correcting lens distortion on a GoPro camera with ffmpeg filters
+include_katex: true
 ---
 
 In recent less apocalyptic times, I used to play dodgeball - a team sport involving throwing foam balls at members of the opposing team. I hope that the COVID-19 outbreak passes soon and I can play it again, but in the meantime the closest I can get is watching videos of it and doing image processing on them. Our team records our matches for later analysis using a GoPro camera. The game is played in a rectangular court surounded by a net, and we mount the camera in the corner of the net so that the net does not obstruct the camera's view of the court, and the camera's field of view includes the entire court.
