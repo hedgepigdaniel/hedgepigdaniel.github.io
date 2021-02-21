@@ -17,8 +17,7 @@ gem "minima", "~> 2.5.1"
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.15"
   gem 'jekyll-katex'
-  gem 'jekyll-image-size'
-  gem 'jekyll-responsive-image'
+  gem 'jekyll_picture_tag'
   gem 'jekyll-toc'
 end
 

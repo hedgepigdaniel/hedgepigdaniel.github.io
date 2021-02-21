@@ -32,8 +32,6 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-katex
-  - jekyll-image-size
-  - jekyll-responsive-image
   - jekyll-sitemap
   - jekyll-toc
 
@@ -41,14 +39,8 @@ show_excerpts: true
 
 google_analytics: UA-156004979-1
 
-responsive_image:
-  template: _includes/responsive-image.html
-  save_to_source: false
-  sizes:
-    - width: 320
-    - width: 640
-    - width: 1280
-    - width: 2560
+picture:
+  suppress_warnings: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

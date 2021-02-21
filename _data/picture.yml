@@ -1,0 +1,7 @@
+presets:
+  default:
+    formats: [webp]
+    widths: [320, 480, 640, 960, 1280, 1920, 2560, 3840, 5120]
+    dimension_attributes: true
+    fallback_format: jpg
+    fallback_width: 1280

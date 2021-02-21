@@ -1,7 +1,4 @@
 <figure class="image">
-    {% responsive_image_block %}
-        path: "{{ include.url }}"
-        alt: "{{ include.description }}"
-    {% endresponsive_image_block %}
+    {% picture {{ include.url }} --alt {{ include.description }} %}
     <figcaption>{{ include.description }}</figcaption>
 </figure>

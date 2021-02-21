@@ -10,7 +10,6 @@ GEM
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
     execjs (2.7.0)
-    fastimage (2.2.2)
     ffi (1.14.2)
     forwardable-extended (2.6.0)
     http_parser.rb (0.6.0)
@@ -33,9 +32,6 @@ GEM
       terminal-table (~> 2.0)
     jekyll-feed (0.15.1)
       jekyll (>= 3.7, < 5.0)
-    jekyll-image-size (1.2.1)
-      fastimage (>= 1.8)
-      jekyll (>= 3.7)
     jekyll-katex (1.0.0)
       execjs (~> 2.7)
       jekyll (>= 3.6, < 5.0)
@@ -53,6 +49,12 @@ GEM
       nokogiri (~> 1.10)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
+    jekyll_picture_tag (1.14.0)
+      addressable (~> 2.6)
+      jekyll (< 5)
+      mime-types (~> 3.0)
+      mini_magick (~> 4.0)
+      objective_elements (~> 1.1)
     kramdown (2.3.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -62,6 +64,10 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
+    mime-types (3.3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2021.0212)
+    mini_magick (4.11.0)
     mini_portile2 (2.5.0)
     minima (2.5.1)
       jekyll (>= 3.5, < 5.0)
@@ -70,6 +76,7 @@ GEM
     nokogiri (1.11.1)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
+    objective_elements (1.1.2)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
@@ -99,11 +106,11 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 4.2.0)
   jekyll-feed (~> 0.15)
-  jekyll-image-size
   jekyll-katex
   jekyll-responsive-image
   jekyll-sitemap (~> 1.4)
   jekyll-toc
+  jekyll_picture_tag
   minima (~> 2.5.1)
   tzinfo (~> 1.2)
   tzinfo-data
