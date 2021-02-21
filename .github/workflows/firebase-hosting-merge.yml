@@ -8,8 +8,9 @@ name: Deploy to Firebase Hosting on merge
       - firebase
 jobs:
   build_and_deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
+      - run: sudo apt-get install ruby ruby-bundler imagemagick
       - uses: actions/checkout@v2
       - run: ./build.sh
       - uses: FirebaseExtended/action-hosting-deploy@v0
