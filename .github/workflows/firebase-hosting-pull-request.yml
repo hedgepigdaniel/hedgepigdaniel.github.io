@@ -12,6 +12,13 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
+      - name: Cache resized images
+        uses: actions/cache@v2
+        with:
+          path: |
+            .jekyll-cache
+            _site/generated/assets/img
+          key: ${{ runner.os }}-0
       - run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
