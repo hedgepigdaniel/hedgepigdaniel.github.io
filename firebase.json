@@ -24,6 +24,33 @@
           }
         ]
       }
-    ]
+    ],
+    "redirects": [
+      {
+        "source": "/blogging/2021/02/19/new-desk-part-1-buying-a-frame.html",
+        "destination": "/blogging/2021/02/20/new-desk-part-1-buying-a-frame.html",
+        "type": 301
+      },
+      {
+        "source": "/blogging/2021/02/19/new-desk-part-2-finding-a-slab.html",
+        "destination": "/blogging/2021/02/20/new-desk-part-2-finding-a-slab.html",
+        "type": 301
+      },
+      {
+        "source": "/blogging/2021/02/19/new-desk-part-3-gap-filling-and-sanding.html",
+        "destination": "/blogging/2021/02/20/new-desk-part-3-gap-filling-and-sanding.html",
+        "type": 301
+      },
+      {
+        "source": "/blogging/2021/02/19/new-desk-part-4-finishing.html",
+        "destination": "/blogging/2021/02/20/new-desk-part-4-finishing.html",
+        "type": 301
+      },
+      {
+        "source": "/blogging/2021/02/19/new-desk-part-5-assembling-and-reflections.html",
+        "destination": "/blogging/2021/02/20/new-desk-part-5-assembling-and-reflections.html",
+        "type": 301
+      }
+    ]  
   }
 }

@@ -35,6 +35,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-toc
 
+timezone: Australia/Sydney
+
 show_excerpts: true
 
 google_analytics: UA-156004979-1
