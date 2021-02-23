@@ -7,9 +7,6 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-20.04
     steps:
-      - uses: zcong1993/setup-timezone@master
-        with:
-          timezone: "Australia/Sydney"
       - uses: actions/checkout@v2
       - uses: ruby/setup-ruby@v1
         with:
