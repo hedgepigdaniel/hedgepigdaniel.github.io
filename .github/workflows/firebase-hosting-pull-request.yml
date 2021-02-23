@@ -15,7 +15,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: |
-            .jekyll-cache
+            .jekyll-cache/jpt
             _site/generated/assets/img
           key: 0
       - run: bundle exec jekyll build
