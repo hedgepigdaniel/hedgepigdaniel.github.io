@@ -82,6 +82,7 @@ circular-dependency-plugin is a webpack plugin to generate a warning when there 
 
 ### loadable-components
 loadable-components is a set of libraries for code splitting and server side rendering of React components. My contributions were:
+ - Adding [support for components in named exports](https://github.com/gregberge/loadable-components/pull/483) in asynchronously imported modules.
  - The [addition of a script](https://github.com/gregberge/loadable-components/pull/486) to make test releases as github tags (something which is not easy in a monorepo).
  - The addition of a [new option](https://github.com/gregberge/loadable-components/pull/487) to avoid calling the expensive `stats.toJson()` function, which significantly increases watching recompile speed in large projects.
 
