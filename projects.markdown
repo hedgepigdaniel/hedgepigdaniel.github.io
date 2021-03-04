@@ -31,6 +31,9 @@ These are projects which I maintain that have a significant community following,
 
 These are projects which I created myself, either alone or with others.
 
+### webpack-cloud-functions
+[webpack-cloud-functions](https://github.com/hedgepigdaniel/webpack-cloud-functions) An integration for using webpack with cloud/lambda functions. Supports seamless HMR for local development and optimised bundles for production.
+
 ### webpack-error-on-warnings-plugin
 
 [webpack-error-on-warnings-plugin](https://github.com/hedgepigdaniel/webpack-error-on-warnings-plugin) is a simple webpack plugin to fail builds in CI if there are warnings. Very similar to [webpack-errors-to-warnings-plugin](https://www.npmjs.com/package/warnings-to-errors-webpack-plugin), but written in Typescript.
