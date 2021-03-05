@@ -184,6 +184,10 @@ In the future, I might write a similar post about video stabilisation. I'm also 
 
 - updated the section on the v360 filter to point out that the bugs I found when I wrote this post have been fixed
 
+#### Update (March 5, 2021)
+
+- The [next post]({% post_url 2021-03-05-transforming-compressed-video-on-the-gpu-using-opencv %}) is up... but so far it's more about GPU acceleration than video stabilisation. In the future I will get to the video stabilisation part!
+
 [ffmpeg-filters]: https://ffmpeg.org/ffmpeg-filters.html
 [lenscorrection]: https://ffmpeg.org/ffmpeg-filters.html#toc-lenscorrection
 [ffmpeg-lensfun]: https://ffmpeg.org/ffmpeg-filters.html#toc-lensfun
