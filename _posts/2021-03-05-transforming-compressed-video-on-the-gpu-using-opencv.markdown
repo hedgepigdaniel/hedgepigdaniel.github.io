@@ -237,6 +237,8 @@ void init_opencv_opencl_context(AVBufferRef *ocl_device_ctx) {
 
 ```
 
+To make this work I had to [fix a bug][header-bug] in FFmpeg where the header providing `AVOpenCLDeviceContext` was not copied to the include directory.
+
 Next, I attached the VA-API hardware context to the decoder context and configured the decoder to output VA-API frames:
 
 ```c++
