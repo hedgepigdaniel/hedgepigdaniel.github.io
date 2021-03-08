@@ -361,7 +361,7 @@ The combination of libavcodec mapping between VA-API and OpenCL hardware frames,
 
 Anyway, this was an interesting adventure. The next step is to actually use the OpenCV API to do the change in lens projection and video stabilisation. That requires some more experimentation, so I will leave this here for now. At least I'm confident that even a very slow implementation will be miles faster than the 3fps I started out with!
 
-P.S. In case you really want to see the source code, [it's here](https://github.com/hedgepigdaniel/video-annotator/blob/6f9454c110b24eac5337e95176cacc02f5378c8f/opencv/DisplayImage.cpp) (probably in a mostly working state).
+P.S. In case you really want to see the source code, [it's here](https://github.com/hedgepigdaniel/video-annotator/blob/master/opencv/DisplayImage.cpp) (probably in a mostly working state).
 
 
 [vidstabdetect]: https://ffmpeg.org/ffmpeg-filters.html#vidstabdetect-1
