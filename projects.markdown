@@ -31,6 +31,9 @@ These are projects which I maintain that have a significant community following,
 
 These are projects which I created myself, either alone or with others.
 
+### Dewobble
+[Dewobble](https://git.sr.ht/~hedgepigdaniel/dewobble) ([docs](../dewobble/index.html)) is a library for doing video motion stabilisation with awareness of camera projections.
+
 ### webpack-cloud-functions
 [webpack-cloud-functions](https://github.com/hedgepigdaniel/webpack-cloud-functions) An integration for using webpack with cloud/lambda functions. Supports seamless HMR for local development and optimised bundles for production.
 
