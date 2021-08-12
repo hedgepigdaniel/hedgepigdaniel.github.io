@@ -102,7 +102,6 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_README"></a> Dewobble is a library for video motion stabilization and camera projection changes. It is written in C++, with headers provided for C++ and C.</p>
 <p>It is named dewobble because its accurate camera models avoid the wobbling effect that is produced by many other video stabilisation libraries when they are applied to videos with a wide field of view.</p>
-<p><img src="https://git.sr.ht/~hedgepigdaniel/dewobble/blob/trunk/logo.png" alt="" width="320px" class="inline"/></p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Documentation</h1>
 <p>See the detailed Doxygen <a href="https://www.danielplayfaircal.com/dewobble/index.html">documentation</a>.</p>
@@ -206,19 +205,19 @@ C++</h2>
 <div class="line">    filter.release_input_frame_buffer(&amp;input_frame);</div>
 <div class="line">    filter.release_output_frame_buffer(&amp;output_frame);</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassdewobble_1_1Camera_html"><div class="ttname"><a href="classdewobble_1_1Camera.html">dewobble::Camera</a></div><div class="ttdef"><b>Definition:</b> camera.hpp:15</div></div>
-<div class="ttc" id="aclassdewobble_1_1FilterConfig_html"><div class="ttname"><a href="classdewobble_1_1FilterConfig.html">dewobble::FilterConfig</a></div><div class="ttdef"><b>Definition:</b> filter_config.hpp:34</div></div>
-<div class="ttc" id="aclassdewobble_1_1FilterThreaded_html"><div class="ttname"><a href="classdewobble_1_1FilterThreaded.html">dewobble::FilterThreaded</a></div><div class="ttdef"><b>Definition:</b> filter_threaded.hpp:81</div></div>
+<div class="ttc" id="aclassdewobble_1_1Camera_html"><div class="ttname"><a href="classdewobble_1_1Camera.html">dewobble::Camera</a></div><div class="ttdef"><b>Definition:</b> camera.hpp:28</div></div>
+<div class="ttc" id="aclassdewobble_1_1FilterConfig_html"><div class="ttname"><a href="classdewobble_1_1FilterConfig.html">dewobble::FilterConfig</a></div><div class="ttdef"><b>Definition:</b> filter_config.hpp:83</div></div>
+<div class="ttc" id="aclassdewobble_1_1FilterThreaded_html"><div class="ttname"><a href="classdewobble_1_1FilterThreaded.html">dewobble::FilterThreaded</a></div><div class="ttdef"><b>Definition:</b> filter_threaded.hpp:83</div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md12"></a>
 C</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;dewobble/filter_threaded.h&gt;</span></div>
 <div class="line"> </div>
-<div class="line">DewobbleCamera input_camera = NULL, output_camera = NULL;</div>
-<div class="line">DewobbleStabilizer stabilizer = NULL;</div>
-<div class="line">DewobbleFilterConfig config = NULL;</div>
-<div class="line">DewobbleFilter filter = NULL;</div>
+<div class="line"><a class="code" href="camera_8h.html#a0c51d1d6fb9fd1ab998dfe753eda9d6e">DewobbleCamera</a> input_camera = NULL, output_camera = NULL;</div>
+<div class="line"><a class="code" href="stabilizer_8h.html#a705a2928fce7c54fe4250a8450a22fb1">DewobbleStabilizer</a> stabilizer = NULL;</div>
+<div class="line"><a class="code" href="filter__config_8h.html#a6fcf4798f0679ae5559a7a63735b5100">DewobbleFilterConfig</a> config = NULL;</div>
+<div class="line"><a class="code" href="filter_8h.html#a6acda99ecfeba0514a3afdf58f5fed5a">DewobbleFilter</a> filter = NULL;</div>
 <div class="line"> </div>
-<div class="line">input_camera = dewobble_camera_create(</div>
+<div class="line">input_camera = <a class="code" href="camera_8h.html#ad188a94b6600ce78aa4831f546848ce9">dewobble_camera_create</a>(</div>
 <div class="line">    DEWOBBLE_PROJECTION_EQUIDISTANT_FISHEYE,</div>
 <div class="line">    145.8 * PI / 180,</div>
 <div class="line">    1920,</div>
@@ -226,7 +225,7 @@ C</h2>
 <div class="line">    (1920 - 1.0) / 2,</div>
 <div class="line">    (1440 - 1.0) / 2);</div>
 <div class="line"> </div>
-<div class="line">output_camera = dewobble_camera_create(</div>
+<div class="line">output_camera = <a class="code" href="camera_8h.html#ad188a94b6600ce78aa4831f546848ce9">dewobble_camera_create</a>(</div>
 <div class="line">    DEWOBBLE_PROJECTION_RECTILINEAR,</div>
 <div class="line">    145.8 * PI / 180,</div>
 <div class="line">    1920,</div>
@@ -234,33 +233,49 @@ C</h2>
 <div class="line">    (1920 - 1.0) / 2,</div>
 <div class="line">    (1440 - 1.0) / 2);</div>
 <div class="line"> </div>
-<div class="line">stabilizer = dewobble_stabilizer_create_savitzky_golay(input_camera, 60, 30);</div>
+<div class="line">stabilizer = <a class="code" href="stabilizer_8h.html#ae097ebc0616bfe023b168a322b081d59">dewobble_stabilizer_create_savitzky_golay</a>(input_camera, 60, 30);</div>
 <div class="line"> </div>
-<div class="line">config = dewobble_filter_config_create(input_camera, output_camera, stabilizer);</div>
-<div class="line">dewobble_filter_config_set_opencl_context(config, context);</div>
-<div class="line">dewobble_filter_config_set_opencl_context(config, device);</div>
+<div class="line">config = <a class="code" href="filter__config_8h.html#ad5adbda5dabf18dd0b830f54253e78a0">dewobble_filter_config_create</a>(input_camera, output_camera, stabilizer);</div>
+<div class="line"><a class="code" href="filter__config_8h.html#a52aecdb03b1c8e2a5d3faa82ee11d5f5">dewobble_filter_config_set_opencl_context</a>(config, context);</div>
+<div class="line"><a class="code" href="filter__config_8h.html#a52aecdb03b1c8e2a5d3faa82ee11d5f5">dewobble_filter_config_set_opencl_context</a>(config, device);</div>
 <div class="line"> </div>
-<div class="line">filter = dewobble_filter_create_threaded(config);</div>
+<div class="line">filter = <a class="code" href="filter_8h.html#a554e02a0426e0780329c78edb8ba35a8">dewobble_filter_create_threaded</a>(config);</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordflow">while</span> (...) {</div>
-<div class="line">    cl_mem input_frame = dewobble_filter_get_input_frame_buffer(filter);</div>
+<div class="line">    cl_mem input_frame = <a class="code" href="filter_8h.html#a70b3a68d2d7b6fa13cec9e498266f560">dewobble_filter_get_input_frame_buffer</a>(filter);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// ... put data in input frame</span></div>
 <div class="line"> </div>
-<div class="line">    dewobble_filter_push_frame(filter, input_frame, NULL);</div>
+<div class="line">    <a class="code" href="filter_8h.html#a28c0701bb68b05661e9997fa3732bc5f">dewobble_filter_push_frame</a>(filter, input_frame, NULL);</div>
 <div class="line">}</div>
-<div class="line">dewobble_filter_end_input(filter);</div>
+<div class="line"><a class="code" href="filter_8h.html#abc86745102f1abe46bc531b4f6c9ad9e">dewobble_filter_end_input</a>(filter);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordflow">while</span> (dewobble_filter_frame_ready(filter)) {</div>
+<div class="line"><span class="keywordflow">while</span> (<a class="code" href="filter_8h.html#aaa632a99f88d8f8b090660046ecba7a1">dewobble_filter_frame_ready</a>(filter)) {</div>
 <div class="line">    cl_mem output_frame = NULL, input_frame;</div>
 <div class="line">    frame =</div>
-<div class="line">        dewobble_filter_pull_frame(filter, &amp;output_frame, &amp;input_frame, NULL);</div>
+<div class="line">        <a class="code" href="filter_8h.html#a5995cee64149aca34e8465e42addc956">dewobble_filter_pull_frame</a>(filter, &amp;output_frame, &amp;input_frame, NULL);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// ... retrieve data from output frame</span></div>
 <div class="line"> </div>
-<div class="line">    dewobble_filter_release_output_frame_buffer(filter, &amp;output_frame);</div>
-<div class="line">    dewobble_filter_release_input_frame_buffer(filter, &amp;input_frame);</div>
+<div class="line">    <a class="code" href="filter_8h.html#ad89dab01bf9c5cab83036856664958b9">dewobble_filter_release_output_frame_buffer</a>(filter, &amp;output_frame);</div>
+<div class="line">    <a class="code" href="filter_8h.html#ac0d590bf435774d7b07d1f9420385a92">dewobble_filter_release_input_frame_buffer</a>(filter, &amp;input_frame);</div>
 <div class="line">}</div>
+<div class="ttc" id="acamera_8h_html_a0c51d1d6fb9fd1ab998dfe753eda9d6e"><div class="ttname"><a href="camera_8h.html#a0c51d1d6fb9fd1ab998dfe753eda9d6e">DewobbleCamera</a></div><div class="ttdeci">struct _DewobbleCamera * DewobbleCamera</div><div class="ttdef"><b>Definition:</b> camera.h:16</div></div>
+<div class="ttc" id="acamera_8h_html_ad188a94b6600ce78aa4831f546848ce9"><div class="ttname"><a href="camera_8h.html#ad188a94b6600ce78aa4831f546848ce9">dewobble_camera_create</a></div><div class="ttdeci">DewobbleCamera dewobble_camera_create(DewobbleProjection projection, double diagonal_field_of_view, int width, int height, double focal_point_x, double focal_point_y)</div></div>
+<div class="ttc" id="afilter_8h_html_a28c0701bb68b05661e9997fa3732bc5f"><div class="ttname"><a href="filter_8h.html#a28c0701bb68b05661e9997fa3732bc5f">dewobble_filter_push_frame</a></div><div class="ttdeci">int dewobble_filter_push_frame(DewobbleFilter c_filter, cl_mem input_buffer, void *extra)</div></div>
+<div class="ttc" id="afilter_8h_html_a554e02a0426e0780329c78edb8ba35a8"><div class="ttname"><a href="filter_8h.html#a554e02a0426e0780329c78edb8ba35a8">dewobble_filter_create_threaded</a></div><div class="ttdeci">DewobbleFilter dewobble_filter_create_threaded(DewobbleFilterConfig config)</div></div>
+<div class="ttc" id="afilter_8h_html_a5995cee64149aca34e8465e42addc956"><div class="ttname"><a href="filter_8h.html#a5995cee64149aca34e8465e42addc956">dewobble_filter_pull_frame</a></div><div class="ttdeci">int dewobble_filter_pull_frame(DewobbleFilter c_filter, cl_mem *output_buffer, cl_mem *input_buffer, void **extra)</div></div>
+<div class="ttc" id="afilter_8h_html_a6acda99ecfeba0514a3afdf58f5fed5a"><div class="ttname"><a href="filter_8h.html#a6acda99ecfeba0514a3afdf58f5fed5a">DewobbleFilter</a></div><div class="ttdeci">struct _DewobbleFilter * DewobbleFilter</div><div class="ttdef"><b>Definition:</b> filter.h:18</div></div>
+<div class="ttc" id="afilter_8h_html_a70b3a68d2d7b6fa13cec9e498266f560"><div class="ttname"><a href="filter_8h.html#a70b3a68d2d7b6fa13cec9e498266f560">dewobble_filter_get_input_frame_buffer</a></div><div class="ttdeci">cl_mem dewobble_filter_get_input_frame_buffer(DewobbleFilter c_filter, cl_int *errcode_ret)</div></div>
+<div class="ttc" id="afilter_8h_html_aaa632a99f88d8f8b090660046ecba7a1"><div class="ttname"><a href="filter_8h.html#aaa632a99f88d8f8b090660046ecba7a1">dewobble_filter_frame_ready</a></div><div class="ttdeci">int dewobble_filter_frame_ready(DewobbleFilter c_filter)</div></div>
+<div class="ttc" id="afilter_8h_html_abc86745102f1abe46bc531b4f6c9ad9e"><div class="ttname"><a href="filter_8h.html#abc86745102f1abe46bc531b4f6c9ad9e">dewobble_filter_end_input</a></div><div class="ttdeci">int dewobble_filter_end_input(DewobbleFilter c_filter)</div></div>
+<div class="ttc" id="afilter_8h_html_ac0d590bf435774d7b07d1f9420385a92"><div class="ttname"><a href="filter_8h.html#ac0d590bf435774d7b07d1f9420385a92">dewobble_filter_release_input_frame_buffer</a></div><div class="ttdeci">void dewobble_filter_release_input_frame_buffer(DewobbleFilter c_filter, cl_mem *input_buffer)</div></div>
+<div class="ttc" id="afilter_8h_html_ad89dab01bf9c5cab83036856664958b9"><div class="ttname"><a href="filter_8h.html#ad89dab01bf9c5cab83036856664958b9">dewobble_filter_release_output_frame_buffer</a></div><div class="ttdeci">void dewobble_filter_release_output_frame_buffer(DewobbleFilter c_filter, cl_mem *output_buffer)</div></div>
+<div class="ttc" id="afilter__config_8h_html_a52aecdb03b1c8e2a5d3faa82ee11d5f5"><div class="ttname"><a href="filter__config_8h.html#a52aecdb03b1c8e2a5d3faa82ee11d5f5">dewobble_filter_config_set_opencl_context</a></div><div class="ttdeci">void dewobble_filter_config_set_opencl_context(DewobbleFilterConfig c_config, cl_context context)</div></div>
+<div class="ttc" id="afilter__config_8h_html_a6fcf4798f0679ae5559a7a63735b5100"><div class="ttname"><a href="filter__config_8h.html#a6fcf4798f0679ae5559a7a63735b5100">DewobbleFilterConfig</a></div><div class="ttdeci">struct _DewobbleFilterConfig * DewobbleFilterConfig</div><div class="ttdef"><b>Definition:</b> filter_config.h:42</div></div>
+<div class="ttc" id="afilter__config_8h_html_ad5adbda5dabf18dd0b830f54253e78a0"><div class="ttname"><a href="filter__config_8h.html#ad5adbda5dabf18dd0b830f54253e78a0">dewobble_filter_config_create</a></div><div class="ttdeci">DewobbleFilterConfig dewobble_filter_config_create(DewobbleCamera input_camera, DewobbleCamera output_camera, DewobbleStabilizer stabilizer)</div></div>
+<div class="ttc" id="astabilizer_8h_html_a705a2928fce7c54fe4250a8450a22fb1"><div class="ttname"><a href="stabilizer_8h.html#a705a2928fce7c54fe4250a8450a22fb1">DewobbleStabilizer</a></div><div class="ttdeci">struct _DewobbleStabilizer * DewobbleStabilizer</div><div class="ttdef"><b>Definition:</b> stabilizer.h:18</div></div>
+<div class="ttc" id="astabilizer_8h_html_ae097ebc0616bfe023b168a322b081d59"><div class="ttname"><a href="stabilizer_8h.html#ae097ebc0616bfe023b168a322b081d59">dewobble_stabilizer_create_savitzky_golay</a></div><div class="ttdeci">DewobbleStabilizer dewobble_stabilizer_create_savitzky_golay(DewobbleCamera camera, int radius, unsigned int interpolation_horizon)</div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md13"></a>
 input/output format</h2>
 <p>Currently the only accepted input and output is an OpenCL buffer containing an NV12 image with full range BT.709 colours. To assist with tracking other data associated with frames, it is also possible to attach a <code>void *</code> pointer called <code>extra</code> to each frame.</p>

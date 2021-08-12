@@ -112,42 +112,56 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>dewobble</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">enum</span> Projection {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    PROJECTION_RECTILINEAR,</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    PROJECTION_EQUIDISTANT_FISHEYE,</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classdewobble_1_1Camera.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdewobble_1_1Camera.html">Camera</a></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">const</span> Projection m_projection;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> m_focal_length;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> m_width;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> m_height;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> m_focal_point_x;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> m_focal_point_y;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classdewobble_1_1Camera.html">Camera</a>(</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        Projection projection,</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">double</span> diagonal_field_of_view,</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">int</span> width,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">int</span> height,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">double</span> focal_point_x,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">double</span> focal_point_y);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    cv::Size size() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    cv::Matx33d matrix() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    cv::Mat distortion_coefficients() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::vector&lt;cv::Point2f&gt; undistortPoints(</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        std::vector&lt;cv::Point2f&gt; points,</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        cv::InputArray rotation = cv::noArray(),</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        cv::InputArray output_matrix = cv::noArray()) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    std::vector&lt;cv::Point2f&gt; distortPoints(</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        std::vector&lt;cv::Point2f&gt; points,</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        cv::InputArray input_matrix = cv::noArray()) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;} <span class="comment">// namespace dewobble</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// DEWOBBLE_CAMERA_HPP</span></div>
-<div class="ttc" id="aclassdewobble_1_1Camera_html"><div class="ttname"><a href="classdewobble_1_1Camera.html">dewobble::Camera</a></div><div class="ttdef"><b>Definition:</b> camera.hpp:15</div></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">enum</span> Projection {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    PROJECTION_RECTILINEAR,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    PROJECTION_EQUIDISTANT_FISHEYE,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classdewobble_1_1Camera.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdewobble_1_1Camera.html">Camera</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classdewobble_1_1Camera.html#a6f6faf5dbcda3ef463368c2e94cc82c5">   33</a></span>&#160;    <span class="keyword">const</span> Projection <a class="code" href="classdewobble_1_1Camera.html#a6f6faf5dbcda3ef463368c2e94cc82c5">m_projection</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classdewobble_1_1Camera.html#adca2b66863475c70b245fbc94ed18937">   37</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="classdewobble_1_1Camera.html#adca2b66863475c70b245fbc94ed18937">m_focal_length</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classdewobble_1_1Camera.html#a742551bebe3ff8eb840a8c6aaa782dc3">   41</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classdewobble_1_1Camera.html#a742551bebe3ff8eb840a8c6aaa782dc3">m_width</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classdewobble_1_1Camera.html#a5aa7a3ff4679a9d3af7aa7c6ccf4dc2f">   45</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classdewobble_1_1Camera.html#a5aa7a3ff4679a9d3af7aa7c6ccf4dc2f">m_height</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classdewobble_1_1Camera.html#aa3701e4022a20b8b2ed9c01a77de6311">   49</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="classdewobble_1_1Camera.html#aa3701e4022a20b8b2ed9c01a77de6311">m_focal_point_x</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classdewobble_1_1Camera.html#a1036f7f1f82f701858c6770b0fc0e9f0">   53</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="classdewobble_1_1Camera.html#a1036f7f1f82f701858c6770b0fc0e9f0">m_focal_point_y</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classdewobble_1_1Camera.html">Camera</a>(</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        Projection projection,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">double</span> diagonal_field_of_view,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">int</span> width,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">int</span> height,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">double</span> focal_point_x,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">double</span> focal_point_y);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classdewobble_1_1Camera.html#aa0e9a7133668f9987497a5fbe2cb736f">   67</a></span>&#160;    cv::Size <a class="code" href="classdewobble_1_1Camera.html#aa0e9a7133668f9987497a5fbe2cb736f">size</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classdewobble_1_1Camera.html#af2ef8e3a5b2a1c1ad4a45e9f27ecf5c2">   73</a></span>&#160;    cv::Matx33d <a class="code" href="classdewobble_1_1Camera.html#af2ef8e3a5b2a1c1ad4a45e9f27ecf5c2">matrix</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classdewobble_1_1Camera.html#ad657e1205ad02eac0f7c87943c49691c">   79</a></span>&#160;    cv::Mat <a class="code" href="classdewobble_1_1Camera.html#ad657e1205ad02eac0f7c87943c49691c">distortion_coefficients</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classdewobble_1_1Camera.html#a2939d02f4b5eee3f2c858b4a87095512">   92</a></span>&#160;    std::vector&lt;cv::Point2f&gt; <a class="code" href="classdewobble_1_1Camera.html#a2939d02f4b5eee3f2c858b4a87095512">undistortPoints</a>(</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        std::vector&lt;cv::Point2f&gt; points,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        cv::InputArray rotation = cv::noArray(),</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        cv::InputArray output_matrix = cv::noArray()) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classdewobble_1_1Camera.html#a171bf74f0897835a770f41464f4d9def">  106</a></span>&#160;    std::vector&lt;cv::Point2f&gt; <a class="code" href="classdewobble_1_1Camera.html#a171bf74f0897835a770f41464f4d9def">distortPoints</a>(</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        std::vector&lt;cv::Point2f&gt; points,</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        cv::InputArray input_matrix = cv::noArray()) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;};</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;} <span class="comment">// namespace dewobble</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// DEWOBBLE_CAMERA_HPP</span></div>
+<div class="ttc" id="aclassdewobble_1_1Camera_html"><div class="ttname"><a href="classdewobble_1_1Camera.html">dewobble::Camera</a></div><div class="ttdef"><b>Definition:</b> camera.hpp:28</div></div>
+<div class="ttc" id="aclassdewobble_1_1Camera_html_a1036f7f1f82f701858c6770b0fc0e9f0"><div class="ttname"><a href="classdewobble_1_1Camera.html#a1036f7f1f82f701858c6770b0fc0e9f0">dewobble::Camera::m_focal_point_y</a></div><div class="ttdeci">const double m_focal_point_y</div><div class="ttdef"><b>Definition:</b> camera.hpp:53</div></div>
+<div class="ttc" id="aclassdewobble_1_1Camera_html_a171bf74f0897835a770f41464f4d9def"><div class="ttname"><a href="classdewobble_1_1Camera.html#a171bf74f0897835a770f41464f4d9def">dewobble::Camera::distortPoints</a></div><div class="ttdeci">std::vector&lt; cv::Point2f &gt; distortPoints(std::vector&lt; cv::Point2f &gt; points, cv::InputArray input_matrix=cv::noArray()) const</div></div>
+<div class="ttc" id="aclassdewobble_1_1Camera_html_a2939d02f4b5eee3f2c858b4a87095512"><div class="ttname"><a href="classdewobble_1_1Camera.html#a2939d02f4b5eee3f2c858b4a87095512">dewobble::Camera::undistortPoints</a></div><div class="ttdeci">std::vector&lt; cv::Point2f &gt; undistortPoints(std::vector&lt; cv::Point2f &gt; points, cv::InputArray rotation=cv::noArray(), cv::InputArray output_matrix=cv::noArray()) const</div></div>
+<div class="ttc" id="aclassdewobble_1_1Camera_html_a5aa7a3ff4679a9d3af7aa7c6ccf4dc2f"><div class="ttname"><a href="classdewobble_1_1Camera.html#a5aa7a3ff4679a9d3af7aa7c6ccf4dc2f">dewobble::Camera::m_height</a></div><div class="ttdeci">const int m_height</div><div class="ttdef"><b>Definition:</b> camera.hpp:45</div></div>
+<div class="ttc" id="aclassdewobble_1_1Camera_html_a6f6faf5dbcda3ef463368c2e94cc82c5"><div class="ttname"><a href="classdewobble_1_1Camera.html#a6f6faf5dbcda3ef463368c2e94cc82c5">dewobble::Camera::m_projection</a></div><div class="ttdeci">const Projection m_projection</div><div class="ttdef"><b>Definition:</b> camera.hpp:33</div></div>
+<div class="ttc" id="aclassdewobble_1_1Camera_html_a742551bebe3ff8eb840a8c6aaa782dc3"><div class="ttname"><a href="classdewobble_1_1Camera.html#a742551bebe3ff8eb840a8c6aaa782dc3">dewobble::Camera::m_width</a></div><div class="ttdeci">const int m_width</div><div class="ttdef"><b>Definition:</b> camera.hpp:41</div></div>
+<div class="ttc" id="aclassdewobble_1_1Camera_html_aa0e9a7133668f9987497a5fbe2cb736f"><div class="ttname"><a href="classdewobble_1_1Camera.html#aa0e9a7133668f9987497a5fbe2cb736f">dewobble::Camera::size</a></div><div class="ttdeci">cv::Size size() const</div></div>
+<div class="ttc" id="aclassdewobble_1_1Camera_html_aa3701e4022a20b8b2ed9c01a77de6311"><div class="ttname"><a href="classdewobble_1_1Camera.html#aa3701e4022a20b8b2ed9c01a77de6311">dewobble::Camera::m_focal_point_x</a></div><div class="ttdeci">const double m_focal_point_x</div><div class="ttdef"><b>Definition:</b> camera.hpp:49</div></div>
+<div class="ttc" id="aclassdewobble_1_1Camera_html_ad657e1205ad02eac0f7c87943c49691c"><div class="ttname"><a href="classdewobble_1_1Camera.html#ad657e1205ad02eac0f7c87943c49691c">dewobble::Camera::distortion_coefficients</a></div><div class="ttdeci">cv::Mat distortion_coefficients() const</div></div>
+<div class="ttc" id="aclassdewobble_1_1Camera_html_adca2b66863475c70b245fbc94ed18937"><div class="ttname"><a href="classdewobble_1_1Camera.html#adca2b66863475c70b245fbc94ed18937">dewobble::Camera::m_focal_length</a></div><div class="ttdeci">const double m_focal_length</div><div class="ttdef"><b>Definition:</b> camera.hpp:37</div></div>
+<div class="ttc" id="aclassdewobble_1_1Camera_html_af2ef8e3a5b2a1c1ad4a45e9f27ecf5c2"><div class="ttname"><a href="classdewobble_1_1Camera.html#af2ef8e3a5b2a1c1ad4a45e9f27ecf5c2">dewobble::Camera::matrix</a></div><div class="ttdeci">cv::Matx33d matrix() const</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

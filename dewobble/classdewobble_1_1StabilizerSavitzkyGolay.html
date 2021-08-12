@@ -107,6 +107,8 @@ $(function() {
 <div class="title">dewobble::StabilizerSavitzkyGolay Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="stabilizer_8hpp_source.html">stabilizer.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for dewobble::StabilizerSavitzkyGolay:</div>
 <div class="dyncontent">
@@ -119,8 +121,8 @@ Inheritance diagram for dewobble::StabilizerSavitzkyGolay:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a872bb1517f11d291d4d331ed7cddb108"><td class="memItemLeft" align="right" valign="top"><a id="a872bb1517f11d291d4d331ed7cddb108"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>StabilizerSavitzkyGolay</b> (<a class="el" href="classdewobble_1_1Camera.html">Camera</a> camera, unsigned int radius, int interpolation_horizon=0)</td></tr>
+<tr class="memitem:a872bb1517f11d291d4d331ed7cddb108"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdewobble_1_1StabilizerSavitzkyGolay.html#a872bb1517f11d291d4d331ed7cddb108">StabilizerSavitzkyGolay</a> (<a class="el" href="classdewobble_1_1Camera.html">Camera</a> camera, unsigned int radius, int interpolation_horizon=0)</td></tr>
+<tr class="memdesc:a872bb1517f11d291d4d331ed7cddb108"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Savitzky-Golay stabilizer.  <a href="classdewobble_1_1StabilizerSavitzkyGolay.html#a872bb1517f11d291d4d331ed7cddb108">More...</a><br /></td></tr>
 <tr class="separator:a872bb1517f11d291d4d331ed7cddb108"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a494c068b519303e145d4bfa412b31053"><td class="memItemLeft" align="right" valign="top"><a id="a494c068b519303e145d4bfa412b31053"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>end_input</b> ()</td></tr>
@@ -145,6 +147,53 @@ std::queue&lt; <a class="el" href="classdewobble_1_1StabilizedFrame.html">Stabil
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_input_ended</b> = false</td></tr>
 <tr class="separator:ac4ac1872fd11de10f3c23cf09d21d94f inherit pro_attribs_classdewobble_1_1Stabilizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classdewobble_1_1Stabilizer.html">Stabilizer</a> which uses a Savitzky-Golay filter on the detected input camera rotations to produce a smooth output camera path </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a872bb1517f11d291d4d331ed7cddb108"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a872bb1517f11d291d4d331ed7cddb108">&#9670;&nbsp;</a></span>StabilizerSavitzkyGolay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dewobble::StabilizerSavitzkyGolay::StabilizerSavitzkyGolay </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdewobble_1_1Camera.html">Camera</a>&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>interpolation_horizon</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new Savitzky-Golay stabilizer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>the input camera </td></tr>
+    <tr><td class="paramname">radius</td><td>the number of frames to look ahead and behind the current frame when deciding how to rotate the frame </td></tr>
+    <tr><td class="paramname">interpolation_horizon</td><td>maximum number of input frames to buffer to assist with interpolating rotation on input frames where it could not be detected </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/<a class="el" href="stabilizer_8hpp_source.html">stabilizer.hpp</a></li>
 </ul>

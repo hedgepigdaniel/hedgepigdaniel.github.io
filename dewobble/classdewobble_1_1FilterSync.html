@@ -107,6 +107,8 @@ $(function() {
 <div class="title">dewobble::FilterSync Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="filter__sync_8hpp_source.html">filter_sync.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for dewobble::FilterSync:</div>
 <div class="dyncontent">
@@ -119,8 +121,7 @@ Inheritance diagram for dewobble::FilterSync:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a860e61ac5d31be3410eb7c7fee173b34"><td class="memItemLeft" align="right" valign="top"><a id="a860e61ac5d31be3410eb7c7fee173b34"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FilterSync</b> (<a class="el" href="classdewobble_1_1FilterConfig.html">FilterConfig</a> config)</td></tr>
+<tr class="memitem:a860e61ac5d31be3410eb7c7fee173b34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdewobble_1_1FilterSync.html#a860e61ac5d31be3410eb7c7fee173b34">FilterSync</a> (<a class="el" href="classdewobble_1_1FilterConfig.html">FilterConfig</a> config)</td></tr>
 <tr class="separator:a860e61ac5d31be3410eb7c7fee173b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fa092a7310dfbb4a2d92252dd25b9eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdewobble_1_1FilterSync.html#a2fa092a7310dfbb4a2d92252dd25b9eb">end_input</a> ()</td></tr>
 <tr class="separator:a2fa092a7310dfbb4a2d92252dd25b9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,8 +134,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:affe7d595590021e6b9955bfd43410d11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdewobble_1_1FilterSync.html#affe7d595590021e6b9955bfd43410d11">push_frame</a> (cl_mem input_buffer, void *extra)</td></tr>
 <tr class="separator:affe7d595590021e6b9955bfd43410d11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classdewobble_1_1FilterBase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdewobble_1_1FilterBase')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdewobble_1_1FilterBase.html">dewobble::FilterBase</a></td></tr>
-<tr class="memitem:a05299ad77b14a2185d46cad3bfe504eb inherit pub_methods_classdewobble_1_1FilterBase"><td class="memItemLeft" align="right" valign="top"><a id="a05299ad77b14a2185d46cad3bfe504eb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FilterBase</b> (<a class="el" href="classdewobble_1_1FilterConfig.html">FilterConfig</a> config)</td></tr>
+<tr class="memitem:a05299ad77b14a2185d46cad3bfe504eb inherit pub_methods_classdewobble_1_1FilterBase"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdewobble_1_1FilterBase.html#a05299ad77b14a2185d46cad3bfe504eb">FilterBase</a> (<a class="el" href="classdewobble_1_1FilterConfig.html">FilterConfig</a> config)</td></tr>
 <tr class="separator:a05299ad77b14a2185d46cad3bfe504eb inherit pub_methods_classdewobble_1_1FilterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc27c6909de93c8e0efe71b05ef246da inherit pub_methods_classdewobble_1_1FilterBase"><td class="memItemLeft" align="right" valign="top">virtual cl_mem&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdewobble_1_1FilterBase.html#adc27c6909de93c8e0efe71b05ef246da">get_input_frame_buffer</a> ()</td></tr>
 <tr class="separator:adc27c6909de93c8e0efe71b05ef246da inherit pub_methods_classdewobble_1_1FilterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,6 +146,31 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A filter implentation that operates synchronously within the same thread.</p>
+<dl class="section note"><dt>Note</dt><dd>Using this filter will cause OpenCV's global per-thread OpenCL context to be set for the thread where it is used, and the context also must not be set elsewhere in that thread. </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a860e61ac5d31be3410eb7c7fee173b34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a860e61ac5d31be3410eb7c7fee173b34">&#9670;&nbsp;</a></span>FilterSync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dewobble::FilterSync::FilterSync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdewobble_1_1FilterConfig.html">FilterConfig</a>&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p></p>
+<p>Construct a new filter with the given configuration </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="affe7d595590021e6b9955bfd43410d11"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#affe7d595590021e6b9955bfd43410d11">&#9670;&nbsp;</a></span>push_frame()</h2>
