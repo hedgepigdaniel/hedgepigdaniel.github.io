@@ -121,67 +121,67 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>dewobble</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classdewobble_1_1MessageInit.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdewobble_1_1MessageInit.html">MessageInit</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">class </span>MessageInit</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">const</span> <a class="code" href="classdewobble_1_1FilterConfig.html">FilterConfig</a> filter_config;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classdewobble_1_1MessageInit.html">MessageInit</a>(<a class="code" href="classdewobble_1_1FilterConfig.html">FilterConfig</a> filter_config) : filter_config(filter_config) {}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">const</span> FilterConfig filter_config;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    MessageInit(FilterConfig filter_config) : filter_config(filter_config) {}</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classdewobble_1_1MessageInputFrame.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdewobble_1_1MessageInputFrame.html">MessageInputFrame</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">class </span>MessageInputFrame</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">const</span> cl_mem buffer;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> *extra;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classdewobble_1_1MessageInputFrame.html">MessageInputFrame</a>(cl_mem buffer, <span class="keywordtype">void</span> *extra) : buffer(buffer), extra(extra)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    MessageInputFrame(cl_mem buffer, <span class="keywordtype">void</span> *extra) : buffer(buffer), extra(extra)</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classdewobble_1_1MessageReleaseOutputFrameBuffer.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdewobble_1_1MessageReleaseOutputFrameBuffer.html">MessageReleaseOutputFrameBuffer</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">class </span>MessageReleaseOutputFrameBuffer</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">const</span> cl_mem buffer;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classdewobble_1_1MessageReleaseOutputFrameBuffer.html">MessageReleaseOutputFrameBuffer</a>(cl_mem buffer) : buffer(buffer) {}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    MessageReleaseOutputFrameBuffer(cl_mem buffer) : buffer(buffer) {}</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classdewobble_1_1MessageEndInput.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdewobble_1_1MessageEndInput.html">MessageEndInput</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">class </span>MessageEndInput</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classdewobble_1_1MessageTerminate.html">   46</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdewobble_1_1MessageTerminate.html">MessageTerminate</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">class </span>MessageTerminate</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classdewobble_1_1MessageAcknowledgeFrame.html">   50</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdewobble_1_1MessageAcknowledgeFrame.html">MessageAcknowledgeFrame</a></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">class </span>MessageAcknowledgeFrame</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classdewobble_1_1MessageOutputFrame.html">   54</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdewobble_1_1MessageOutputFrame.html">MessageOutputFrame</a></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">class </span>MessageOutputFrame</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">const</span> cl_mem output_buffer;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">const</span> cl_mem input_buffer;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> *extra;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classdewobble_1_1MessageOutputFrame.html">MessageOutputFrame</a>(cl_mem output_buffer, cl_mem input_buffer, <span class="keywordtype">void</span> *extra)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    MessageOutputFrame(cl_mem output_buffer, cl_mem input_buffer, <span class="keywordtype">void</span> *extra)</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        : output_buffer(output_buffer), input_buffer(input_buffer), extra(extra)</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">typedef</span> std::variant&lt;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="classdewobble_1_1MessageInit.html">MessageInit</a>,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classdewobble_1_1MessageInputFrame.html">MessageInputFrame</a>,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classdewobble_1_1MessageReleaseOutputFrameBuffer.html">MessageReleaseOutputFrameBuffer</a>,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classdewobble_1_1MessageEndInput.html">MessageEndInput</a>,</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="classdewobble_1_1MessageTerminate.html">MessageTerminate</a>&gt;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    MessageInit,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    MessageInputFrame,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    MessageReleaseOutputFrameBuffer,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    MessageEndInput,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    MessageTerminate&gt;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    MessageInput;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">typedef</span> std::variant&lt;MessageOutputFrame, MessageAcknowledgeFrame&gt; MessageOutput;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classdewobble_1_1FilterThreaded.html">   82</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdewobble_1_1FilterThreaded.html">FilterThreaded</a> : <span class="keyword">public</span> <a class="code" href="classdewobble_1_1FilterBase.html">FilterBase</a></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classdewobble_1_1SafeQueue.html">SafeQueue&lt;MessageInput&gt;</a> m_input_queue;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="classdewobble_1_1SafeQueue.html">SafeQueue&lt;MessageOutput&gt;</a> m_output_queue;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    SafeQueue&lt;MessageInput&gt; m_input_queue;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    SafeQueue&lt;MessageOutput&gt; m_output_queue;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    std::thread m_worker_thread;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">bool</span> m_input_ended = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">int</span> m_num_unacknowledged_frames = 0;</div>
@@ -217,14 +217,6 @@ $(function() {
 <div class="ttc" id="aclassdewobble_1_1FilterThreaded_html_a46ff2ca4fe278ecd1be44882586fdb89"><div class="ttname"><a href="classdewobble_1_1FilterThreaded.html#a46ff2ca4fe278ecd1be44882586fdb89">dewobble::FilterThreaded::release_output_frame_buffer</a></div><div class="ttdeci">void release_output_frame_buffer(cl_mem *output_buffer)</div></div>
 <div class="ttc" id="aclassdewobble_1_1FilterThreaded_html_a7169279bf11cedc020c21ca2c585d6d2"><div class="ttname"><a href="classdewobble_1_1FilterThreaded.html#a7169279bf11cedc020c21ca2c585d6d2">dewobble::FilterThreaded::end_input</a></div><div class="ttdeci">void end_input()</div></div>
 <div class="ttc" id="aclassdewobble_1_1FilterThreaded_html_aa65929b2d561a4cc1dc567fde0956fdc"><div class="ttname"><a href="classdewobble_1_1FilterThreaded.html#aa65929b2d561a4cc1dc567fde0956fdc">dewobble::FilterThreaded::push_frame</a></div><div class="ttdeci">void push_frame(cl_mem input_buffer, void *extra)</div></div>
-<div class="ttc" id="aclassdewobble_1_1MessageAcknowledgeFrame_html"><div class="ttname"><a href="classdewobble_1_1MessageAcknowledgeFrame.html">dewobble::MessageAcknowledgeFrame</a></div><div class="ttdef"><b>Definition:</b> filter_threaded.hpp:51</div></div>
-<div class="ttc" id="aclassdewobble_1_1MessageEndInput_html"><div class="ttname"><a href="classdewobble_1_1MessageEndInput.html">dewobble::MessageEndInput</a></div><div class="ttdef"><b>Definition:</b> filter_threaded.hpp:43</div></div>
-<div class="ttc" id="aclassdewobble_1_1MessageInit_html"><div class="ttname"><a href="classdewobble_1_1MessageInit.html">dewobble::MessageInit</a></div><div class="ttdef"><b>Definition:</b> filter_threaded.hpp:19</div></div>
-<div class="ttc" id="aclassdewobble_1_1MessageInputFrame_html"><div class="ttname"><a href="classdewobble_1_1MessageInputFrame.html">dewobble::MessageInputFrame</a></div><div class="ttdef"><b>Definition:</b> filter_threaded.hpp:26</div></div>
-<div class="ttc" id="aclassdewobble_1_1MessageOutputFrame_html"><div class="ttname"><a href="classdewobble_1_1MessageOutputFrame.html">dewobble::MessageOutputFrame</a></div><div class="ttdef"><b>Definition:</b> filter_threaded.hpp:55</div></div>
-<div class="ttc" id="aclassdewobble_1_1MessageReleaseOutputFrameBuffer_html"><div class="ttname"><a href="classdewobble_1_1MessageReleaseOutputFrameBuffer.html">dewobble::MessageReleaseOutputFrameBuffer</a></div><div class="ttdef"><b>Definition:</b> filter_threaded.hpp:36</div></div>
-<div class="ttc" id="aclassdewobble_1_1MessageTerminate_html"><div class="ttname"><a href="classdewobble_1_1MessageTerminate.html">dewobble::MessageTerminate</a></div><div class="ttdef"><b>Definition:</b> filter_threaded.hpp:47</div></div>
-<div class="ttc" id="aclassdewobble_1_1SafeQueue_html"><div class="ttname"><a href="classdewobble_1_1SafeQueue.html">dewobble::SafeQueue&lt; MessageInput &gt;</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
