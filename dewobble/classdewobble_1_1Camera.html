@@ -108,49 +108,272 @@ $(function() {
 <div class="title">dewobble::Camera Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="camera_8hpp_source.html">camera.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1bc998ea5a6b3d216b2c0e4ec7593eaa"><td class="memItemLeft" align="right" valign="top"><a id="a1bc998ea5a6b3d216b2c0e4ec7593eaa"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Camera</b> (Projection projection, double diagonal_field_of_view, int width, int height, double focal_point_x, double focal_point_y)</td></tr>
 <tr class="separator:a1bc998ea5a6b3d216b2c0e4ec7593eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad657e1205ad02eac0f7c87943c49691c"><td class="memItemLeft" align="right" valign="top"><a id="ad657e1205ad02eac0f7c87943c49691c"></a>
-cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><b>distortion_coefficients</b> () const</td></tr>
+<tr class="memitem:ad657e1205ad02eac0f7c87943c49691c"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdewobble_1_1Camera.html#ad657e1205ad02eac0f7c87943c49691c">distortion_coefficients</a> () const</td></tr>
 <tr class="separator:ad657e1205ad02eac0f7c87943c49691c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a171bf74f0897835a770f41464f4d9def"><td class="memItemLeft" align="right" valign="top"><a id="a171bf74f0897835a770f41464f4d9def"></a>
-std::vector&lt; cv::Point2f &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>distortPoints</b> (std::vector&lt; cv::Point2f &gt; points, cv::InputArray input_matrix=cv::noArray()) const</td></tr>
+<tr class="memitem:a171bf74f0897835a770f41464f4d9def"><td class="memItemLeft" align="right" valign="top">std::vector&lt; cv::Point2f &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdewobble_1_1Camera.html#a171bf74f0897835a770f41464f4d9def">distortPoints</a> (std::vector&lt; cv::Point2f &gt; points, cv::InputArray input_matrix=cv::noArray()) const</td></tr>
 <tr class="separator:a171bf74f0897835a770f41464f4d9def"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2ef8e3a5b2a1c1ad4a45e9f27ecf5c2"><td class="memItemLeft" align="right" valign="top"><a id="af2ef8e3a5b2a1c1ad4a45e9f27ecf5c2"></a>
-cv::Matx33d&#160;</td><td class="memItemRight" valign="bottom"><b>matrix</b> () const</td></tr>
+<tr class="memitem:af2ef8e3a5b2a1c1ad4a45e9f27ecf5c2"><td class="memItemLeft" align="right" valign="top">cv::Matx33d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdewobble_1_1Camera.html#af2ef8e3a5b2a1c1ad4a45e9f27ecf5c2">matrix</a> () const</td></tr>
 <tr class="separator:af2ef8e3a5b2a1c1ad4a45e9f27ecf5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0e9a7133668f9987497a5fbe2cb736f"><td class="memItemLeft" align="right" valign="top"><a id="aa0e9a7133668f9987497a5fbe2cb736f"></a>
-cv::Size&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const</td></tr>
+<tr class="memitem:aa0e9a7133668f9987497a5fbe2cb736f"><td class="memItemLeft" align="right" valign="top">cv::Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdewobble_1_1Camera.html#aa0e9a7133668f9987497a5fbe2cb736f">size</a> () const</td></tr>
 <tr class="separator:aa0e9a7133668f9987497a5fbe2cb736f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2939d02f4b5eee3f2c858b4a87095512"><td class="memItemLeft" align="right" valign="top"><a id="a2939d02f4b5eee3f2c858b4a87095512"></a>
-std::vector&lt; cv::Point2f &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>undistortPoints</b> (std::vector&lt; cv::Point2f &gt; points, cv::InputArray rotation=cv::noArray(), cv::InputArray output_matrix=cv::noArray()) const</td></tr>
+<tr class="memitem:a2939d02f4b5eee3f2c858b4a87095512"><td class="memItemLeft" align="right" valign="top">std::vector&lt; cv::Point2f &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdewobble_1_1Camera.html#a2939d02f4b5eee3f2c858b4a87095512">undistortPoints</a> (std::vector&lt; cv::Point2f &gt; points, cv::InputArray rotation=cv::noArray(), cv::InputArray output_matrix=cv::noArray()) const</td></tr>
 <tr class="separator:a2939d02f4b5eee3f2c858b4a87095512"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:adca2b66863475c70b245fbc94ed18937"><td class="memItemLeft" align="right" valign="top"><a id="adca2b66863475c70b245fbc94ed18937"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>m_focal_length</b></td></tr>
+<tr class="memitem:adca2b66863475c70b245fbc94ed18937"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdewobble_1_1Camera.html#adca2b66863475c70b245fbc94ed18937">m_focal_length</a></td></tr>
 <tr class="separator:adca2b66863475c70b245fbc94ed18937"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3701e4022a20b8b2ed9c01a77de6311"><td class="memItemLeft" align="right" valign="top"><a id="aa3701e4022a20b8b2ed9c01a77de6311"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>m_focal_point_x</b></td></tr>
+<tr class="memitem:aa3701e4022a20b8b2ed9c01a77de6311"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdewobble_1_1Camera.html#aa3701e4022a20b8b2ed9c01a77de6311">m_focal_point_x</a></td></tr>
 <tr class="separator:aa3701e4022a20b8b2ed9c01a77de6311"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1036f7f1f82f701858c6770b0fc0e9f0"><td class="memItemLeft" align="right" valign="top"><a id="a1036f7f1f82f701858c6770b0fc0e9f0"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>m_focal_point_y</b></td></tr>
+<tr class="memitem:a1036f7f1f82f701858c6770b0fc0e9f0"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdewobble_1_1Camera.html#a1036f7f1f82f701858c6770b0fc0e9f0">m_focal_point_y</a></td></tr>
 <tr class="separator:a1036f7f1f82f701858c6770b0fc0e9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aa7a3ff4679a9d3af7aa7c6ccf4dc2f"><td class="memItemLeft" align="right" valign="top"><a id="a5aa7a3ff4679a9d3af7aa7c6ccf4dc2f"></a>
-const int&#160;</td><td class="memItemRight" valign="bottom"><b>m_height</b></td></tr>
+<tr class="memitem:a5aa7a3ff4679a9d3af7aa7c6ccf4dc2f"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdewobble_1_1Camera.html#a5aa7a3ff4679a9d3af7aa7c6ccf4dc2f">m_height</a></td></tr>
 <tr class="separator:a5aa7a3ff4679a9d3af7aa7c6ccf4dc2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f6faf5dbcda3ef463368c2e94cc82c5"><td class="memItemLeft" align="right" valign="top"><a id="a6f6faf5dbcda3ef463368c2e94cc82c5"></a>
-const Projection&#160;</td><td class="memItemRight" valign="bottom"><b>m_projection</b></td></tr>
+<tr class="memitem:a6f6faf5dbcda3ef463368c2e94cc82c5"><td class="memItemLeft" align="right" valign="top">const Projection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdewobble_1_1Camera.html#a6f6faf5dbcda3ef463368c2e94cc82c5">m_projection</a></td></tr>
 <tr class="separator:a6f6faf5dbcda3ef463368c2e94cc82c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a742551bebe3ff8eb840a8c6aaa782dc3"><td class="memItemLeft" align="right" valign="top"><a id="a742551bebe3ff8eb840a8c6aaa782dc3"></a>
-const int&#160;</td><td class="memItemRight" valign="bottom"><b>m_width</b></td></tr>
+<tr class="memitem:a742551bebe3ff8eb840a8c6aaa782dc3"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdewobble_1_1Camera.html#a742551bebe3ff8eb840a8c6aaa782dc3">m_width</a></td></tr>
 <tr class="separator:a742551bebe3ff8eb840a8c6aaa782dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The properties of a camera which affect the mapping between pixels in images and real world coordinates. May be used to interpret an input image or to generate an output image. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa0e9a7133668f9987497a5fbe2cb736f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0e9a7133668f9987497a5fbe2cb736f">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Size dewobble::Camera::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the size of images produced by the camera</p>
+<dl class="section return"><dt>Returns</dt><dd>cv::Size </dd></dl>
+
+</div>
+</div>
+<a id="af2ef8e3a5b2a1c1ad4a45e9f27ecf5c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2ef8e3a5b2a1c1ad4a45e9f27ecf5c2">&#9670;&nbsp;</a></span>matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Matx33d dewobble::Camera::matrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the camera matrix which converts image points to world points</p>
+<dl class="section return"><dt>Returns</dt><dd>cv::Matx33d </dd></dl>
+
+</div>
+</div>
+<a id="ad657e1205ad02eac0f7c87943c49691c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad657e1205ad02eac0f7c87943c49691c">&#9670;&nbsp;</a></span>distortion_coefficients()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Mat dewobble::Camera::distortion_coefficients </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the distortion coefficients for the OpenCV camera model</p>
+<dl class="section return"><dt>Returns</dt><dd>cv::Mat </dd></dl>
+
+</div>
+</div>
+<a id="a2939d02f4b5eee3f2c858b4a87095512"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2939d02f4b5eee3f2c858b4a87095512">&#9670;&nbsp;</a></span>undistortPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;cv::Point2f&gt; dewobble::Camera::undistortPoints </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; cv::Point2f &gt;&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::InputArray&#160;</td>
+          <td class="paramname"><em>rotation</em> = <code>cv::noArray()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::InputArray&#160;</td>
+          <td class="paramname"><em>output_matrix</em> = <code>cv::noArray()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Convert a set of points in an image generated by the camera to points in a chosen camera matrix.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">points</td><td>The input points projected by this camera </td></tr>
+    <tr><td class="paramname">rotation</td><td>Optional rotation to apply to the points in the world coordinate space </td></tr>
+    <tr><td class="paramname">output_matrix</td><td>Optional output camera matrix. If not given, the identity matrix is used. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;cv::Point2f&gt; The converted points projected by the output matrix </dd></dl>
+
+</div>
+</div>
+<a id="a171bf74f0897835a770f41464f4d9def"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a171bf74f0897835a770f41464f4d9def">&#9670;&nbsp;</a></span>distortPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;cv::Point2f&gt; dewobble::Camera::distortPoints </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; cv::Point2f &gt;&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::InputArray&#160;</td>
+          <td class="paramname"><em>input_matrix</em> = <code>cv::noArray()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Map a set of points using the specified input matrix to their location as they would gbe projected by this camera.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">points</td><td>The input points projected by the input matrix </td></tr>
+    <tr><td class="paramname">input_matrix</td><td>Optional input camera matrix. If not given, the identity matrix is used. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;cv::Point2f&gt; The output points projected by this camera </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6f6faf5dbcda3ef463368c2e94cc82c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f6faf5dbcda3ef463368c2e94cc82c5">&#9670;&nbsp;</a></span>m_projection</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Projection dewobble::Camera::m_projection</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Projection model used for the camera </p>
+
+</div>
+</div>
+<a id="adca2b66863475c70b245fbc94ed18937"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adca2b66863475c70b245fbc94ed18937">&#9670;&nbsp;</a></span>m_focal_length</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double dewobble::Camera::m_focal_length</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Focal length in pixels </p>
+
+</div>
+</div>
+<a id="a742551bebe3ff8eb840a8c6aaa782dc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a742551bebe3ff8eb840a8c6aaa782dc3">&#9670;&nbsp;</a></span>m_width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int dewobble::Camera::m_width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Width of the image in pixels </p>
+
+</div>
+</div>
+<a id="a5aa7a3ff4679a9d3af7aa7c6ccf4dc2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aa7a3ff4679a9d3af7aa7c6ccf4dc2f">&#9670;&nbsp;</a></span>m_height</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int dewobble::Camera::m_height</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Height of the image in pixels </p>
+
+</div>
+</div>
+<a id="aa3701e4022a20b8b2ed9c01a77de6311"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3701e4022a20b8b2ed9c01a77de6311">&#9670;&nbsp;</a></span>m_focal_point_x</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double dewobble::Camera::m_focal_point_x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Horizontal coordinate of the focal point, where the lens faces </p>
+
+</div>
+</div>
+<a id="a1036f7f1f82f701858c6770b0fc0e9f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1036f7f1f82f701858c6770b0fc0e9f0">&#9670;&nbsp;</a></span>m_focal_point_y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double dewobble::Camera::m_focal_point_y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Vertical coordinate of the focal point, where the lens faces </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/<a class="el" href="camera_8hpp_source.html">camera.hpp</a></li>
 </ul>

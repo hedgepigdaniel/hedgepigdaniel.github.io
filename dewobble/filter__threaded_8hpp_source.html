@@ -178,41 +178,41 @@ $(function() {
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    MessageInput;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">typedef</span> std::variant&lt;MessageOutputFrame, MessageAcknowledgeFrame&gt; MessageOutput;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classdewobble_1_1FilterThreaded.html">   80</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdewobble_1_1FilterThreaded.html">FilterThreaded</a> : <span class="keyword">public</span> <a class="code" href="classdewobble_1_1FilterBase.html">FilterBase</a></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classSafeQueue.html">SafeQueue&lt;MessageInput&gt;</a> m_input_queue;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classSafeQueue.html">SafeQueue&lt;MessageOutput&gt;</a> m_output_queue;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    std::thread m_worker_thread;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">bool</span> m_input_ended = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">int</span> m_num_unacknowledged_frames = 0;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">int</span> m_num_frames_in_flight = 0;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    std::queue&lt;void *&gt; m_extra_queue;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    std::queue&lt;cl_mem&gt; m_output_buffer_queue;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    std::queue&lt;cl_mem&gt; m_input_buffer_queue;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> read_from_worker();</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    ~<a class="code" href="classdewobble_1_1FilterThreaded.html">FilterThreaded</a>();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="classdewobble_1_1FilterThreaded.html">FilterThreaded</a>(<a class="code" href="classdewobble_1_1FilterConfig.html">FilterConfig</a> filter_config);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classdewobble_1_1FilterThreaded.html#aa65929b2d561a4cc1dc567fde0956fdc">   97</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdewobble_1_1FilterThreaded.html#aa65929b2d561a4cc1dc567fde0956fdc">push_frame</a>(cl_mem input_buffer, <span class="keywordtype">void</span> *extra);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classdewobble_1_1FilterThreaded.html#a7169279bf11cedc020c21ca2c585d6d2">   99</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdewobble_1_1FilterThreaded.html#a7169279bf11cedc020c21ca2c585d6d2">end_input</a>();</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classdewobble_1_1FilterThreaded.html#a2b7663df5614eb8c6ffe1c1a93ddeabd">  101</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classdewobble_1_1FilterThreaded.html#a2b7663df5614eb8c6ffe1c1a93ddeabd">frame_ready</a>();</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classdewobble_1_1FilterThreaded.html#a3842c6e2feeca6429be4573e80ec2698">  103</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdewobble_1_1FilterThreaded.html#a3842c6e2feeca6429be4573e80ec2698">pull_frame</a>(cl_mem *output_buffer, cl_mem *input_buffer, <span class="keywordtype">void</span> **extra);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classdewobble_1_1FilterThreaded.html#a46ff2ca4fe278ecd1be44882586fdb89">  105</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdewobble_1_1FilterThreaded.html#a46ff2ca4fe278ecd1be44882586fdb89">release_output_frame_buffer</a>(cl_mem *output_buffer);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;};</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;} <span class="comment">// namespace dewobble</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// DEWOBBLE_FILTER_HPP</span></div>
-<div class="ttc" id="aclassSafeQueue_html"><div class="ttname"><a href="classSafeQueue.html">SafeQueue&lt; MessageInput &gt;</a></div></div>
-<div class="ttc" id="aclassdewobble_1_1FilterBase_html"><div class="ttname"><a href="classdewobble_1_1FilterBase.html">dewobble::FilterBase</a></div><div class="ttdef"><b>Definition:</b> filter_base.hpp:18</div></div>
-<div class="ttc" id="aclassdewobble_1_1FilterConfig_html"><div class="ttname"><a href="classdewobble_1_1FilterConfig.html">dewobble::FilterConfig</a></div><div class="ttdef"><b>Definition:</b> filter_config.hpp:34</div></div>
-<div class="ttc" id="aclassdewobble_1_1FilterThreaded_html"><div class="ttname"><a href="classdewobble_1_1FilterThreaded.html">dewobble::FilterThreaded</a></div><div class="ttdef"><b>Definition:</b> filter_threaded.hpp:81</div></div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classdewobble_1_1FilterThreaded.html">   82</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdewobble_1_1FilterThreaded.html">FilterThreaded</a> : <span class="keyword">public</span> <a class="code" href="classdewobble_1_1FilterBase.html">FilterBase</a></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classdewobble_1_1SafeQueue.html">SafeQueue&lt;MessageInput&gt;</a> m_input_queue;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="classdewobble_1_1SafeQueue.html">SafeQueue&lt;MessageOutput&gt;</a> m_output_queue;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    std::thread m_worker_thread;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">bool</span> m_input_ended = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">int</span> m_num_unacknowledged_frames = 0;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">int</span> m_num_frames_in_flight = 0;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    std::queue&lt;void *&gt; m_extra_queue;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    std::queue&lt;cl_mem&gt; m_output_buffer_queue;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    std::queue&lt;cl_mem&gt; m_input_buffer_queue;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> read_from_worker();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    ~<a class="code" href="classdewobble_1_1FilterThreaded.html">FilterThreaded</a>();</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classdewobble_1_1FilterThreaded.html#a371284477971879e258f2056c3c8d43b">  100</a></span>&#160;    <a class="code" href="classdewobble_1_1FilterThreaded.html#a371284477971879e258f2056c3c8d43b">FilterThreaded</a>(<a class="code" href="classdewobble_1_1FilterConfig.html">FilterConfig</a> filter_config);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classdewobble_1_1FilterThreaded.html#aa65929b2d561a4cc1dc567fde0956fdc">  102</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdewobble_1_1FilterThreaded.html#aa65929b2d561a4cc1dc567fde0956fdc">push_frame</a>(cl_mem input_buffer, <span class="keywordtype">void</span> *extra);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classdewobble_1_1FilterThreaded.html#a7169279bf11cedc020c21ca2c585d6d2">  104</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdewobble_1_1FilterThreaded.html#a7169279bf11cedc020c21ca2c585d6d2">end_input</a>();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classdewobble_1_1FilterThreaded.html#a2b7663df5614eb8c6ffe1c1a93ddeabd">  106</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classdewobble_1_1FilterThreaded.html#a2b7663df5614eb8c6ffe1c1a93ddeabd">frame_ready</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classdewobble_1_1FilterThreaded.html#a3842c6e2feeca6429be4573e80ec2698">  108</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdewobble_1_1FilterThreaded.html#a3842c6e2feeca6429be4573e80ec2698">pull_frame</a>(cl_mem *output_buffer, cl_mem *input_buffer, <span class="keywordtype">void</span> **extra);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classdewobble_1_1FilterThreaded.html#a46ff2ca4fe278ecd1be44882586fdb89">  110</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdewobble_1_1FilterThreaded.html#a46ff2ca4fe278ecd1be44882586fdb89">release_output_frame_buffer</a>(cl_mem *output_buffer);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;};</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;} <span class="comment">// namespace dewobble</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// DEWOBBLE_FILTER_HPP</span></div>
+<div class="ttc" id="aclassdewobble_1_1FilterBase_html"><div class="ttname"><a href="classdewobble_1_1FilterBase.html">dewobble::FilterBase</a></div><div class="ttdef"><b>Definition:</b> filter_base.hpp:19</div></div>
+<div class="ttc" id="aclassdewobble_1_1FilterConfig_html"><div class="ttname"><a href="classdewobble_1_1FilterConfig.html">dewobble::FilterConfig</a></div><div class="ttdef"><b>Definition:</b> filter_config.hpp:83</div></div>
+<div class="ttc" id="aclassdewobble_1_1FilterThreaded_html"><div class="ttname"><a href="classdewobble_1_1FilterThreaded.html">dewobble::FilterThreaded</a></div><div class="ttdef"><b>Definition:</b> filter_threaded.hpp:83</div></div>
 <div class="ttc" id="aclassdewobble_1_1FilterThreaded_html_a2b7663df5614eb8c6ffe1c1a93ddeabd"><div class="ttname"><a href="classdewobble_1_1FilterThreaded.html#a2b7663df5614eb8c6ffe1c1a93ddeabd">dewobble::FilterThreaded::frame_ready</a></div><div class="ttdeci">bool frame_ready()</div></div>
+<div class="ttc" id="aclassdewobble_1_1FilterThreaded_html_a371284477971879e258f2056c3c8d43b"><div class="ttname"><a href="classdewobble_1_1FilterThreaded.html#a371284477971879e258f2056c3c8d43b">dewobble::FilterThreaded::FilterThreaded</a></div><div class="ttdeci">FilterThreaded(FilterConfig filter_config)</div></div>
 <div class="ttc" id="aclassdewobble_1_1FilterThreaded_html_a3842c6e2feeca6429be4573e80ec2698"><div class="ttname"><a href="classdewobble_1_1FilterThreaded.html#a3842c6e2feeca6429be4573e80ec2698">dewobble::FilterThreaded::pull_frame</a></div><div class="ttdeci">void pull_frame(cl_mem *output_buffer, cl_mem *input_buffer, void **extra)</div></div>
 <div class="ttc" id="aclassdewobble_1_1FilterThreaded_html_a46ff2ca4fe278ecd1be44882586fdb89"><div class="ttname"><a href="classdewobble_1_1FilterThreaded.html#a46ff2ca4fe278ecd1be44882586fdb89">dewobble::FilterThreaded::release_output_frame_buffer</a></div><div class="ttdeci">void release_output_frame_buffer(cl_mem *output_buffer)</div></div>
 <div class="ttc" id="aclassdewobble_1_1FilterThreaded_html_a7169279bf11cedc020c21ca2c585d6d2"><div class="ttname"><a href="classdewobble_1_1FilterThreaded.html#a7169279bf11cedc020c21ca2c585d6d2">dewobble::FilterThreaded::end_input</a></div><div class="ttdeci">void end_input()</div></div>
@@ -224,6 +224,7 @@ $(function() {
 <div class="ttc" id="aclassdewobble_1_1MessageOutputFrame_html"><div class="ttname"><a href="classdewobble_1_1MessageOutputFrame.html">dewobble::MessageOutputFrame</a></div><div class="ttdef"><b>Definition:</b> filter_threaded.hpp:55</div></div>
 <div class="ttc" id="aclassdewobble_1_1MessageReleaseOutputFrameBuffer_html"><div class="ttname"><a href="classdewobble_1_1MessageReleaseOutputFrameBuffer.html">dewobble::MessageReleaseOutputFrameBuffer</a></div><div class="ttdef"><b>Definition:</b> filter_threaded.hpp:36</div></div>
 <div class="ttc" id="aclassdewobble_1_1MessageTerminate_html"><div class="ttname"><a href="classdewobble_1_1MessageTerminate.html">dewobble::MessageTerminate</a></div><div class="ttdef"><b>Definition:</b> filter_threaded.hpp:47</div></div>
+<div class="ttc" id="aclassdewobble_1_1SafeQueue_html"><div class="ttname"><a href="classdewobble_1_1SafeQueue.html">dewobble::SafeQueue&lt; MessageInput &gt;</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

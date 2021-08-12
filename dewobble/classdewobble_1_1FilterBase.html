@@ -123,8 +123,7 @@ Inheritance diagram for dewobble::FilterBase:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a05299ad77b14a2185d46cad3bfe504eb"><td class="memItemLeft" align="right" valign="top"><a id="a05299ad77b14a2185d46cad3bfe504eb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FilterBase</b> (<a class="el" href="classdewobble_1_1FilterConfig.html">FilterConfig</a> config)</td></tr>
+<tr class="memitem:a05299ad77b14a2185d46cad3bfe504eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdewobble_1_1FilterBase.html#a05299ad77b14a2185d46cad3bfe504eb">FilterBase</a> (<a class="el" href="classdewobble_1_1FilterConfig.html">FilterConfig</a> config)</td></tr>
 <tr class="separator:a05299ad77b14a2185d46cad3bfe504eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace55bbff85aefe1d93504645db949448"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdewobble_1_1FilterBase.html#ace55bbff85aefe1d93504645db949448">end_input</a> ()=0</td></tr>
 <tr class="separator:ace55bbff85aefe1d93504645db949448"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,8 +146,28 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ad9a0941d20c4168a127856e7ea2b3599"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A filter for video frames which can apply lens projection changes and/or video stabilisation </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>Abstract base class for filters. A filter is an object which consumes input frames and produces output frames, optionally applying projection changes and/or motion stabilisation. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a05299ad77b14a2185d46cad3bfe504eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05299ad77b14a2185d46cad3bfe504eb">&#9670;&nbsp;</a></span>FilterBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dewobble::FilterBase::FilterBase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdewobble_1_1FilterConfig.html">FilterConfig</a>&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Construct a new filter with the given configuration </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad9a0941d20c4168a127856e7ea2b3599"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad9a0941d20c4168a127856e7ea2b3599">&#9670;&nbsp;</a></span>get_output_frame_buffer()</h2>
 

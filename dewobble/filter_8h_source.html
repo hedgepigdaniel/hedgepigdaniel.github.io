@@ -104,56 +104,69 @@ $(function() {
 <div class="title">filter.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DEWOBBLE_FILTER_H</span></div>
+<a href="filter_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DEWOBBLE_FILTER_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define DEWOBBLE_FILTER_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;CL/cl.h&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;filter_config.h&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_DewobbleFilter *DewobbleFilter;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;DewobbleFilter dewobble_filter_create_threaded(DewobbleFilterConfig config);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;DewobbleFilter dewobble_filter_create_sync(DewobbleFilterConfig config);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> dewobble_filter_destroy(DewobbleFilter *filter);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;cl_mem dewobble_filter_get_input_frame_buffer(</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    DewobbleFilter c_filter,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    cl_int *errcode_ret);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">void</span> dewobble_filter_release_input_frame_buffer(</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    DewobbleFilter c_filter,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    cl_mem *input_buffer);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">int</span> dewobble_filter_push_frame(</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    DewobbleFilter c_filter,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    cl_mem input_buffer,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> *extra);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">int</span> dewobble_filter_end_input(DewobbleFilter c_filter);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">int</span> dewobble_filter_frame_ready(DewobbleFilter c_filter);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">int</span> dewobble_filter_pull_frame(</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    DewobbleFilter c_filter,</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    cl_mem *output_buffer,</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    cl_mem *input_buffer,</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> **extra);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">void</span> dewobble_filter_release_output_frame_buffer(</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    DewobbleFilter c_filter,</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    cl_mem *output_buffer);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// DEWOBBLE_FILTER_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;CL/cl.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="filter__config_8h.html">filter_config.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="filter_8h.html#a6acda99ecfeba0514a3afdf58f5fed5a">   18</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_DewobbleFilter *<a class="code" href="filter_8h.html#a6acda99ecfeba0514a3afdf58f5fed5a">DewobbleFilter</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="filter_8h.html#a554e02a0426e0780329c78edb8ba35a8">   24</a></span>&#160;<a class="code" href="filter_8h.html#a6acda99ecfeba0514a3afdf58f5fed5a">DewobbleFilter</a> <a class="code" href="filter_8h.html#a554e02a0426e0780329c78edb8ba35a8">dewobble_filter_create_threaded</a>(<a class="code" href="filter__config_8h.html#a6fcf4798f0679ae5559a7a63735b5100">DewobbleFilterConfig</a> config);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="filter_8h.html#a536e6aeb802e63b5aea8c6808dfa93a0">   30</a></span>&#160;<a class="code" href="filter_8h.html#a6acda99ecfeba0514a3afdf58f5fed5a">DewobbleFilter</a> <a class="code" href="filter_8h.html#a536e6aeb802e63b5aea8c6808dfa93a0">dewobble_filter_create_sync</a>(<a class="code" href="filter__config_8h.html#a6fcf4798f0679ae5559a7a63735b5100">DewobbleFilterConfig</a> config);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="filter_8h.html#a29c070473470ba0b77bca090c3a4af0d">   35</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filter_8h.html#a29c070473470ba0b77bca090c3a4af0d">dewobble_filter_destroy</a>(<a class="code" href="filter_8h.html#a6acda99ecfeba0514a3afdf58f5fed5a">DewobbleFilter</a> *filter);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="filter_8h.html#a70b3a68d2d7b6fa13cec9e498266f560">   44</a></span>&#160;cl_mem <a class="code" href="filter_8h.html#a70b3a68d2d7b6fa13cec9e498266f560">dewobble_filter_get_input_frame_buffer</a>(</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="filter_8h.html#a6acda99ecfeba0514a3afdf58f5fed5a">DewobbleFilter</a> c_filter,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    cl_int *errcode_ret);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="filter_8h.html#ac0d590bf435774d7b07d1f9420385a92">   56</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filter_8h.html#ac0d590bf435774d7b07d1f9420385a92">dewobble_filter_release_input_frame_buffer</a>(</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="filter_8h.html#a6acda99ecfeba0514a3afdf58f5fed5a">DewobbleFilter</a> c_filter,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    cl_mem *input_buffer);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="filter_8h.html#a28c0701bb68b05661e9997fa3732bc5f">   66</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="filter_8h.html#a28c0701bb68b05661e9997fa3732bc5f">dewobble_filter_push_frame</a>(</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="filter_8h.html#a6acda99ecfeba0514a3afdf58f5fed5a">DewobbleFilter</a> c_filter,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    cl_mem input_buffer,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> *extra);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="filter_8h.html#abc86745102f1abe46bc531b4f6c9ad9e">   75</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="filter_8h.html#abc86745102f1abe46bc531b4f6c9ad9e">dewobble_filter_end_input</a>(<a class="code" href="filter_8h.html#a6acda99ecfeba0514a3afdf58f5fed5a">DewobbleFilter</a> c_filter);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="filter_8h.html#aaa632a99f88d8f8b090660046ecba7a1">   81</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="filter_8h.html#aaa632a99f88d8f8b090660046ecba7a1">dewobble_filter_frame_ready</a>(<a class="code" href="filter_8h.html#a6acda99ecfeba0514a3afdf58f5fed5a">DewobbleFilter</a> c_filter);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="filter_8h.html#a5995cee64149aca34e8465e42addc956">   91</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="filter_8h.html#a5995cee64149aca34e8465e42addc956">dewobble_filter_pull_frame</a>(</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="filter_8h.html#a6acda99ecfeba0514a3afdf58f5fed5a">DewobbleFilter</a> c_filter,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    cl_mem *output_buffer,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    cl_mem *input_buffer,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> **extra);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="filter_8h.html#ad89dab01bf9c5cab83036856664958b9">  105</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filter_8h.html#ad89dab01bf9c5cab83036856664958b9">dewobble_filter_release_output_frame_buffer</a>(</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="filter_8h.html#a6acda99ecfeba0514a3afdf58f5fed5a">DewobbleFilter</a> c_filter,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    cl_mem *output_buffer);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// DEWOBBLE_FILTER_H</span></div>
+<div class="ttc" id="afilter_8h_html_a28c0701bb68b05661e9997fa3732bc5f"><div class="ttname"><a href="filter_8h.html#a28c0701bb68b05661e9997fa3732bc5f">dewobble_filter_push_frame</a></div><div class="ttdeci">int dewobble_filter_push_frame(DewobbleFilter c_filter, cl_mem input_buffer, void *extra)</div></div>
+<div class="ttc" id="afilter_8h_html_a29c070473470ba0b77bca090c3a4af0d"><div class="ttname"><a href="filter_8h.html#a29c070473470ba0b77bca090c3a4af0d">dewobble_filter_destroy</a></div><div class="ttdeci">void dewobble_filter_destroy(DewobbleFilter *filter)</div></div>
+<div class="ttc" id="afilter_8h_html_a536e6aeb802e63b5aea8c6808dfa93a0"><div class="ttname"><a href="filter_8h.html#a536e6aeb802e63b5aea8c6808dfa93a0">dewobble_filter_create_sync</a></div><div class="ttdeci">DewobbleFilter dewobble_filter_create_sync(DewobbleFilterConfig config)</div></div>
+<div class="ttc" id="afilter_8h_html_a554e02a0426e0780329c78edb8ba35a8"><div class="ttname"><a href="filter_8h.html#a554e02a0426e0780329c78edb8ba35a8">dewobble_filter_create_threaded</a></div><div class="ttdeci">DewobbleFilter dewobble_filter_create_threaded(DewobbleFilterConfig config)</div></div>
+<div class="ttc" id="afilter_8h_html_a5995cee64149aca34e8465e42addc956"><div class="ttname"><a href="filter_8h.html#a5995cee64149aca34e8465e42addc956">dewobble_filter_pull_frame</a></div><div class="ttdeci">int dewobble_filter_pull_frame(DewobbleFilter c_filter, cl_mem *output_buffer, cl_mem *input_buffer, void **extra)</div></div>
+<div class="ttc" id="afilter_8h_html_a6acda99ecfeba0514a3afdf58f5fed5a"><div class="ttname"><a href="filter_8h.html#a6acda99ecfeba0514a3afdf58f5fed5a">DewobbleFilter</a></div><div class="ttdeci">struct _DewobbleFilter * DewobbleFilter</div><div class="ttdef"><b>Definition:</b> filter.h:18</div></div>
+<div class="ttc" id="afilter_8h_html_a70b3a68d2d7b6fa13cec9e498266f560"><div class="ttname"><a href="filter_8h.html#a70b3a68d2d7b6fa13cec9e498266f560">dewobble_filter_get_input_frame_buffer</a></div><div class="ttdeci">cl_mem dewobble_filter_get_input_frame_buffer(DewobbleFilter c_filter, cl_int *errcode_ret)</div></div>
+<div class="ttc" id="afilter_8h_html_aaa632a99f88d8f8b090660046ecba7a1"><div class="ttname"><a href="filter_8h.html#aaa632a99f88d8f8b090660046ecba7a1">dewobble_filter_frame_ready</a></div><div class="ttdeci">int dewobble_filter_frame_ready(DewobbleFilter c_filter)</div></div>
+<div class="ttc" id="afilter_8h_html_abc86745102f1abe46bc531b4f6c9ad9e"><div class="ttname"><a href="filter_8h.html#abc86745102f1abe46bc531b4f6c9ad9e">dewobble_filter_end_input</a></div><div class="ttdeci">int dewobble_filter_end_input(DewobbleFilter c_filter)</div></div>
+<div class="ttc" id="afilter_8h_html_ac0d590bf435774d7b07d1f9420385a92"><div class="ttname"><a href="filter_8h.html#ac0d590bf435774d7b07d1f9420385a92">dewobble_filter_release_input_frame_buffer</a></div><div class="ttdeci">void dewobble_filter_release_input_frame_buffer(DewobbleFilter c_filter, cl_mem *input_buffer)</div></div>
+<div class="ttc" id="afilter_8h_html_ad89dab01bf9c5cab83036856664958b9"><div class="ttname"><a href="filter_8h.html#ad89dab01bf9c5cab83036856664958b9">dewobble_filter_release_output_frame_buffer</a></div><div class="ttdeci">void dewobble_filter_release_output_frame_buffer(DewobbleFilter c_filter, cl_mem *output_buffer)</div></div>
+<div class="ttc" id="afilter__config_8h_html"><div class="ttname"><a href="filter__config_8h.html">filter_config.h</a></div></div>
+<div class="ttc" id="afilter__config_8h_html_a6fcf4798f0679ae5559a7a63735b5100"><div class="ttname"><a href="filter__config_8h.html#a6fcf4798f0679ae5559a7a63735b5100">DewobbleFilterConfig</a></div><div class="ttdeci">struct _DewobbleFilterConfig * DewobbleFilterConfig</div><div class="ttdef"><b>Definition:</b> filter_config.h:42</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
