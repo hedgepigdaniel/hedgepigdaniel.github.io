@@ -1,0 +1,32 @@
+{% assign ratio = include.ratio | default: 0.5625 %}
+
+{% assign ratio_percent = ratio | times: 100.0 %}
+
+{% capture padding_top %}
+{% if include.max_width %}
+min({{ ratio_percent }}%, {{ include.max_width | times: ratio }}px)
+{% else %}
+{{ ratio_percent }}%
+{% endif %}
+{% endcapture %}
+
+{% capture max_width_style %}
+{% if include.max_width %}
+max-width: {{ include.max_width }}px;
+{% endif %}
+{% endcapture %}
+
+<figure class="video">
+    <div style="padding-top: {{ padding_top }}; position:relative; {{ max_width_style }}">
+        <iframe
+            src="https://player.vimeo.com/video/{{ include.id }}"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            style="position:absolute; top:0; left:0; width:100%; height:100%;"
+            title="{{ include.description }}"
+        ></iframe>
+    </div>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <figcaption>{{ include.description }}</figcaption>
+</figure>
