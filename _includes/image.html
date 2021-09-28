@@ -1,4 +1,16 @@
+{% assign caption = include.caption | default: include.description %}
+{% assign align = include.align | default: "start" %}
+{% if include.max_width or include.align %}
+<div style="display: flex; justify-content: {{ align }}">
+<div style="max-width: {{ include.max_width }};">
+{% endif %}
 <figure class="image">
     {% picture {{ include.url }} --alt {{ include.description }} %}
-    <figcaption>{{ include.description }}</figcaption>
+    {% unless include.caption == "" %}
+    <figcaption>{{ caption }}</figcaption>
+    {% endunless %}
 </figure>
+{% if include.max_width %}
+</div>
+</div>
+{% endif %}
