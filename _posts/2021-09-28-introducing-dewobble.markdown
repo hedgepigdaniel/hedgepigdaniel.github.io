@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Introducing Dewobble 1.0.0"
-date:   2021-09-28 23:14:00 +1100
+date:   2021-09-28 23:14:00 +1000
 description: Dewobble can stabilise shaky video from wide angle cameras, and simultaneously change the lens projection.
 tags: ["Dewobble", "FFmpeg", "stabilization", "projection", "distortion", "barrel", "GoPro", "GPU", "OpenCL"]
 categories: blogging
