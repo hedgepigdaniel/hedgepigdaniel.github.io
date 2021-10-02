@@ -22,7 +22,7 @@ In video form, here is what dewobble does:
 
 There are many other softwares that change lens projection of videos, including with FFmpeg as [I've previously written][post-lens-distortion]. There are also many other softwares that can do video stabilisation, like [vid.stab][vid.stab], or closed source video editors like Premiere Pro or Final Cut Pro.
 
-However, almost all of them use affine based motion model. I'll explain more about this in a separate post, but the practical consequence is that they don't work very well for videos shot with a wide field of view and/or large camera movements. This is because they don't account for the way objects in the image are distorted when the lens is not facing directly towards them. The result is that there is a wobbling jelly like effect in the stabilised video, as the objects in the image are distorted in different ways depending on where the camera was facing.
+However, most of them (at least, all the FFmpeg filters) use an affine based motion model. I'll explain more about this in a separate post, but the practical consequence is that they don't work very well for videos shot with a wide field of view and/or large camera movements. This is because they don't account for the way objects in the image are distorted when the lens is not facing directly towards them. The result is that there is a wobbling jelly like effect in the stabilised video, as the objects in the image are distorted in different ways depending on where the camera was facing.
 
 Below is the most clear example of this I could produce. Dewobble and vid.stab are both configured with their fixed/tripod mode, which forces them to make large corrections even for slow camera movements. The grid makes the distortion obvious:
 
@@ -38,7 +38,7 @@ This is the use case that Dewobble is optimized for. Dewobble uses a rotation mo
 
 ## Combined projection change and stabilisation
 
-Another distinguishing feature of Dewobble is that it performs both projection changes and stabilisation at once (i.e. with a single pass of pixel interpolation). This has a number of advantages:
+Another important feature of Dewobble is that it performs both projection changes and stabilisation at once (i.e. with a single pass of pixel interpolation). This has a number of advantages:
  - More efficient than 2 separate passes, therefore faster.
  - Reduces quality loss, since interpolation always results in some loss of information.
  - No cropping of intermediate frames (e.g. after stabilisation but before projection change). Every pixel is included as long as it can be mapped from the output to the input.
